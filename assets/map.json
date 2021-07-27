@@ -1,0 +1,124 @@
+{
+	"textures": [
+		{
+			"image": "map",
+			"format": "RGBA8888",
+			"size": {
+				"w": 296,
+				"h": 1480
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "earth",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 296,
+						"h": 296
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 296,
+						"h": 296
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 296,
+						"h": 296
+					}
+				},
+				{
+					"filename": "forest",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 296,
+						"h": 296
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 296,
+						"h": 296
+					},
+					"frame": {
+						"x": 0,
+						"y": 296,
+						"w": 296,
+						"h": 296
+					}
+				},
+				{
+					"filename": "mount",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 296,
+						"h": 296
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 296,
+						"h": 296
+					},
+					"frame": {
+						"x": 0,
+						"y": 592,
+						"w": 296,
+						"h": 296
+					}
+				},
+				{
+					"filename": "swamp",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 296,
+						"h": 296
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 296,
+						"h": 296
+					},
+					"frame": {
+						"x": 0,
+						"y": 888,
+						"w": 296,
+						"h": 296
+					}
+				},
+				{
+					"filename": "water",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 296,
+						"h": 296
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 296,
+						"h": 296
+					},
+					"frame": {
+						"x": 0,
+						"y": 1184,
+						"w": 296,
+						"h": 296
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "http://free-tex-packer.com",
+		"version": "0.6.7"
+	}
+}
