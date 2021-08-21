@@ -113,3 +113,4 @@ fabric.properties
 *.zip
 __RESOURCES/
 node_modules/
+dist/
