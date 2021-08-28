@@ -2,6 +2,7 @@ import {Board, QuadGrid, MiniBoard} from 'phaser3-rex-plugins/plugins/board-comp
 import {Cell, FieldTypes} from "./Cell";
 import GameObject = Phaser.GameObjects.GameObject;
 import {TileXYType} from "phaser3-rex-plugins/plugins/board/types/Position";
+import Unit from "./Unit";
 
 export default class Map {
     static readonly ROWS: number = 12;
@@ -11,6 +12,7 @@ export default class Map {
 
     public board: Board;
     public cellsBoard: MiniBoard;
+    public unitsBoard: MiniBoard;
 
 
     constructor(scene: Phaser.Scene) {
@@ -45,6 +47,16 @@ export default class Map {
             }
         );
 
+        // Create units miniboard
+        this.unitsBoard = new MiniBoard(
+            scene,
+            alignX, alignY,
+            {
+                grid,
+                draggable: false
+            }
+        );
+
         // Fill base grid
         this.board.forEachTileXY((tileXY, board) => {
             this.cellsBoard.addChess(
@@ -55,6 +67,20 @@ export default class Map {
 
         // Generate map
         this.generate_grid();
+
+        this.unitsBoard
+            // .setOrigin(0, 0)
+            .addChess(
+                new Unit(scene),
+                2, 1, 1
+            )
+            .setOrigin(0, 0)
+            .putOnMainBoard(this.board)
+            .alignToMainBoard(this.board)
+        ;
+        // this.board.gridAlign();
+        // this.unitsBoard.pullOutFromMainBoard();
+
 
         // Listen events
         this.cellsBoard.setInteractive();

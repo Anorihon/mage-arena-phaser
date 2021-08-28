@@ -114,3 +114,4 @@ fabric.properties
 __RESOURCES/
 node_modules/
 dist/
+dist/**/*

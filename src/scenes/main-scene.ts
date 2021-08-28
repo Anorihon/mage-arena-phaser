@@ -1,4 +1,5 @@
 import Map from "../objects/Map";
+import Unit from "../objects/Unit";
 
 export class MainScene extends Phaser.Scene {
   private bg: Phaser.GameObjects.Image // background image
@@ -9,6 +10,7 @@ export class MainScene extends Phaser.Scene {
 
   preload(): void {
     this.load.image('bg', '../assets/desk-bg.jpg');
+    this.load.image('hero', '../assets/img/hero.png');
     this.load.atlas('map', '../assets/map.png', '../assets/map.json');
   }
 
