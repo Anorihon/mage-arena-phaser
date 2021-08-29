@@ -1,4 +1,4 @@
-import {Board, QuadGrid, MiniBoard} from 'phaser3-rex-plugins/plugins/board-components.js';
+import {Board, QuadGrid, MiniBoard, MoveTo} from 'phaser3-rex-plugins/plugins/board-components.js';
 import {Cell, FieldTypes} from "./Cell";
 import GameObject = Phaser.GameObjects.GameObject;
 import {TileXYType} from "phaser3-rex-plugins/plugins/board/types/Position";
@@ -68,10 +68,11 @@ export default class Map {
         // Generate map
         this.generate_grid();
 
+        const unit: Unit = new Unit(scene);
         this.unitsBoard
             // .setOrigin(0, 0)
             .addChess(
-                new Unit(scene),
+                unit,
                 2, 1, 1
             )
             .setOrigin(0, 0)
@@ -81,6 +82,13 @@ export default class Map {
         // this.board.gridAlign();
         // this.unitsBoard.pullOutFromMainBoard();
 
+        const moveTo: MoveTo = new MoveTo(unit, {
+            speed: 400,
+            rotateToTarget: false,
+            occupiedTest: false,
+            blockerTest: false,
+            sneak: true
+        });
 
         // Listen events
         this.cellsBoard.setInteractive();
@@ -89,6 +97,8 @@ export default class Map {
             const {row, col, fieldType} = cell;
 
             console.log(FieldTypes[fieldType], row, col);
+
+            moveTo.moveTo(col, row);
         });
 
         scene.input.keyboard.on('keyup-M', () => {
