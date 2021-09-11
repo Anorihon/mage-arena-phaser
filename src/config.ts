@@ -1,5 +1,6 @@
 import {MainScene} from './scenes/main-scene';
 import ScaleModes = Phaser.Scale.ScaleModes;
+import GrayScalePipelinePlugin from 'phaser3-rex-plugins/plugins/grayscalepipeline-plugin.js';
 
 export const GameConfig: Phaser.Types.Core.GameConfig = {
   title: 'Mage Arena',
@@ -13,5 +14,14 @@ export const GameConfig: Phaser.Types.Core.GameConfig = {
   scene: [MainScene],
   scale: {
      mode: ScaleModes.RESIZE
+  },
+  plugins: {
+    global: [
+      {
+        key: 'rexGrayScalePipeline',
+        plugin: GrayScalePipelinePlugin,
+        start: true
+      },
+    ]
   }
 };

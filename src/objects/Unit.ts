@@ -1,6 +1,7 @@
 import Map from "./Map";
 import UnitChipParam from "./UnitChipParam";
 
+
 export default class Unit extends Phaser.GameObjects.Container {
     hp: number = 1
     meleePower: number = 1
@@ -35,6 +36,27 @@ export default class Unit extends Phaser.GameObjects.Container {
                 cropWidth, cropHeight
             );
         this.add(card);
+
+        // @ts-ignore
+        scene.plugins.get('rexGrayScalePipeline').add(card);
+
+        setTimeout(() => {
+            // @ts-ignore
+            scene.plugins.get('rexGrayScalePipeline').remove(card);
+        }, 3000);
+
+        // Border
+        const borderWidth: number = 4;
+        const border = scene.add.graphics()
+            .lineStyle(borderWidth, 0x8826A5FF, 1)
+            .strokeRect(
+                -halfOfCell + borderWidth / 2,
+                -halfOfCell + borderWidth / 2,
+                Map.CELL_SIZE - borderWidth,
+                Map.CELL_SIZE - borderWidth
+            )
+        ;
+        this.add(border);
 
         // --- Params ---
         let shape: UnitChipParam;

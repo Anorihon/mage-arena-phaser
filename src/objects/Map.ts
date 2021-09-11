@@ -3,6 +3,7 @@ import {Cell, FieldTypes} from "./Cell";
 import GameObject = Phaser.GameObjects.GameObject;
 import {TileXYType} from "phaser3-rex-plugins/plugins/board/types/Position";
 import Unit from "./Unit";
+import Database from "../utils/Database";
 
 export default class Map {
     static readonly ROWS: number = 12;
@@ -98,7 +99,47 @@ export default class Map {
 
             console.log(FieldTypes[fieldType], row, col);
 
-            moveTo.moveTo(col, row);
+            // moveTo.moveTo(col, row);
+
+
+            this.unitsBoard.pullOutFromMainBoard();
+
+            const dirs: Array<number> = [0, 1, 2, 3];
+            const cellsInRow: number = 3;
+
+            dirs.forEach(dirIndex => {
+                let chess = this.board.getNeighborChess(cell, dirIndex);
+
+                if (chess) {
+                    let _cell: Cell = (chess as Cell);
+                    _cell.setHighlight(!_cell.isHighlighted());
+
+                    for (let i = 0; i < cellsInRow - 1; i++) {
+                        // @ts-ignore
+                        chess = this.board.getNeighborChess(chess, dirIndex);
+
+                        if (!chess) break;
+
+                        _cell = (chess as Cell);
+                        _cell.setHighlight(!_cell.isHighlighted());
+                    }
+                }
+            });
+            // const neighborChess = this.board.getNeighborChess(cell, [0, 1, 2, 3]);
+            //
+            // if (Array.isArray(neighborChess)) {
+            //     neighborChess.forEach(chess => {
+            //         const _cell: Cell = (chess as Cell);
+            //         _cell.setHighlight(!_cell.isHighlighted());
+            //     });
+            // }else if (neighborChess) {
+            //     const _cell: Cell = (neighborChess as Cell);
+            //     _cell.setHighlight(!_cell.isHighlighted());
+            // }
+
+            // cell.setHighlight(!cell.isHighlighted());
+
+            this.unitsBoard.putBack();
         });
 
         scene.input.keyboard.on('keyup-M', () => {
@@ -108,6 +149,11 @@ export default class Map {
         scene.input.keyboard.on('keyup-F', () => {
             this.flipBoard();
         });
+
+
+        const db: Database = Database.getInstance();
+
+        db.getFractions();
     }
 
     generate_grid(resetCells: boolean = false) {
@@ -266,6 +312,8 @@ export default class Map {
     }
 
     flipBoard() {
+        this.unitsBoard.pullOutFromMainBoard();
+
         const cellsList: Array<GameObject> = this.board.getAllChess();
         const cellsCount: number = cellsList.length;
         const initPositions: Array<TileXYType> = [];
@@ -287,5 +335,7 @@ export default class Map {
 
             this.board.moveChess(cell, pos.x, pos.y, 0, true);
         });
+
+        this.unitsBoard.putBack();
     }
 }

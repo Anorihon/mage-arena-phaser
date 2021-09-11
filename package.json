@@ -12,6 +12,7 @@
     "webpack-dev-server": "3.11.2"
   },
   "dependencies": {
+    "firebase": "^9.0.1",
     "phaser": "3.52.0",
     "phaser3-rex-plugins": "^1.1.57"
   },
