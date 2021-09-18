@@ -1494,15 +1494,6 @@
     "snapdragon" "^0.8.1"
     "to-regex" "^3.0.1"
 
-"exports-loader@^1.1.1":
-  "integrity" "sha512-CmyhIR2sJ3KOfVsHjsR0Yvo+0lhRhRMAevCbB8dhTVLHsZPs0lCQTvRmR9YNvBXDBxUuhmCE2f54KqEjZUaFrg=="
-  "resolved" "https://registry.npmjs.org/exports-loader/-/exports-loader-1.1.1.tgz"
-  "version" "1.1.1"
-  dependencies:
-    "loader-utils" "^2.0.0"
-    "schema-utils" "^3.0.0"
-    "source-map" "^0.6.1"
-
 "expose-loader@2.0.0":
   "integrity" "sha512-WBpSGlNkn7YwbU2us7O+h0XsoFrB43Y/VCNSpRV4OZFXXKgw8W800BgNxLV0S97N3+KGnFYSCAJi1AV86NO22w=="
   "resolved" "https://registry.npmjs.org/expose-loader/-/expose-loader-2.0.0.tgz"
@@ -1961,16 +1952,6 @@
   dependencies:
     "pkg-dir" "^4.2.0"
     "resolve-cwd" "^3.0.0"
-
-"imports-loader@^1.2.0":
-  "integrity" "sha512-zPvangKEgrrPeqeUqH0Uhc59YqK07JqZBi9a9cQ3v/EKUIqrbJHY4CvUrDus2lgQa5AmPyXuGrWP8JJTqzE5RQ=="
-  "resolved" "https://registry.npmjs.org/imports-loader/-/imports-loader-1.2.0.tgz"
-  "version" "1.2.0"
-  dependencies:
-    "loader-utils" "^2.0.0"
-    "schema-utils" "^3.0.0"
-    "source-map" "^0.6.1"
-    "strip-comments" "^2.0.1"
 
 "inflight@^1.0.4":
   "integrity" "sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk="
@@ -2865,20 +2846,18 @@
     "process" "^0.11.1"
     "util" "^0.10.3"
 
-"phaser@3.52.0":
-  "integrity" "sha512-oH39AUXR+cletB3GIvLnVO2J7/M6xs0D0LamVdCrbCDO3jckQOVBcqR6SJ2wam+4D5iJTCXv8K+FmxFzcTUWuA=="
-  "resolved" "https://registry.npmjs.org/phaser/-/phaser-3.52.0.tgz"
-  "version" "3.52.0"
+"phaser@^3.55.2":
+  "integrity" "sha512-amKXsbb2Ht29dGPKvt1edq3yGGYKtq8373GpJYGKPNPnneYY6MtVTOgjHDuZwtmUyK4v86FugkT3hzW/N4tjxQ=="
+  "resolved" "https://registry.npmjs.org/phaser/-/phaser-3.55.2.tgz"
+  "version" "3.55.2"
   dependencies:
     "eventemitter3" "^4.0.7"
-    "exports-loader" "^1.1.1"
-    "imports-loader" "^1.2.0"
     "path" "^0.12.7"
 
-"phaser3-rex-plugins@^1.1.57":
-  "integrity" "sha512-P0TIn1H54vwjmSeQ8Ylt4qM7FVds8iMv9pSSnEFiFmtsOd1T6Sk1l2nV2RonQWfDRHTfYH9oXn4o5Yi0oCtugA=="
-  "resolved" "https://registry.npmjs.org/phaser3-rex-plugins/-/phaser3-rex-plugins-1.1.57.tgz"
-  "version" "1.1.57"
+"phaser3-rex-plugins@^1.1.60":
+  "integrity" "sha512-cnl5wug7mm7eRJu+SNGqoPOsJeSZk+V5/Q2qQO1xKaWwvN5KhYfbkJDq47bgz17ZBckyXbjwiUZy3Y/13yfwHg=="
+  "resolved" "https://registry.npmjs.org/phaser3-rex-plugins/-/phaser3-rex-plugins-1.1.60.tgz"
+  "version" "1.1.60"
   dependencies:
     "eventemitter3" "^3.1.2"
     "lokijs" "^1.5.12"
@@ -3616,11 +3595,6 @@
   "version" "6.0.0"
   dependencies:
     "ansi-regex" "^5.0.0"
-
-"strip-comments@^2.0.1":
-  "integrity" "sha512-ZprKx+bBLXv067WTCALv8SSz5l2+XhpYCsVtSqlMnkAXMWDq+/ekVbl1ghqP9rUHTzv6sm/DwCOiYutU/yp1fw=="
-  "resolved" "https://registry.npmjs.org/strip-comments/-/strip-comments-2.0.1.tgz"
-  "version" "2.0.1"
 
 "strip-eof@^1.0.0":
   "integrity" "sha1-u0P/VZim6wXYm1n80SnJgzE2Br8="

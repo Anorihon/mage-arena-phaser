@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "firebase": "^9.0.1",
-    "phaser": "3.52.0",
-    "phaser3-rex-plugins": "^1.1.57"
+    "phaser": "^3.55.2",
+    "phaser3-rex-plugins": "^1.1.60"
   },
   "scripts": {
     "dev": "webpack --mode development && webpack serve --mode development"
