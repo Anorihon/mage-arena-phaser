@@ -23,5 +23,6 @@ export const GameConfig: Phaser.Types.Core.GameConfig = {
         start: true
       },
     ]
-  }
+  },
+  disableContextMenu: true
 };
