@@ -12,16 +12,18 @@ export class Cell extends Phaser.GameObjects.Container {
 
     constructor(scene: Phaser.Scene, x: number, y: number) {
         super(scene, x, y);
+        
+        const cellSize: number = Math.floor(scene.cameras.main.height / 12);
 
-        this.width = Map.CELL_SIZE;
-        this.height = Map.CELL_SIZE;
+        this.width = cellSize;
+        this.height = cellSize;
 
         // Create main texture
         this.bg = scene.add.image(0, 0, 'map', 'earth');
-        this.bg.setDisplaySize(Map.CELL_SIZE, Map.CELL_SIZE);
+        this.bg.setDisplaySize(cellSize, cellSize);
 
         this.highlight = scene.add
-            .rectangle(0, 0, Map.CELL_SIZE, Map.CELL_SIZE)
+            .rectangle(0, 0, cellSize, cellSize)
             .setFillStyle(Cell.HIGHLIGHT_COLOR, Cell.HIGHLIGHT_ALPHA)
             .setVisible(false);
 

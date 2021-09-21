@@ -1,6 +1,7 @@
 import {MainScene} from './scenes/main-scene';
 import ScaleModes = Phaser.Scale.ScaleModes;
 import GrayScalePipelinePlugin from 'phaser3-rex-plugins/plugins/grayscalepipeline-plugin.js';
+// import RexUIPlugin from 'phaser3-rex-plugins/templates/ui/ui-plugin.js';
 
 export const GameConfig: Phaser.Types.Core.GameConfig = {
   title: 'Mage Arena',
@@ -22,7 +23,12 @@ export const GameConfig: Phaser.Types.Core.GameConfig = {
         plugin: GrayScalePipelinePlugin,
         start: true
       },
-    ]
+    ],
+    // scene: [{
+    //   key: 'rexUI',
+    //   plugin: RexUIPlugin,
+    //   mapping: 'rexUI'
+    // }]
   },
   disableContextMenu: true
 };
