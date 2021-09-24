@@ -37,16 +37,19 @@ export class MainScene extends Phaser.Scene {
     });
     this.add.existing(mainSizer);
 
-    const totalRows = 12;
-    const totalCols = 12;
+    const TOTAL_ROWS: number = 12;
+    const TOTAL_COLS: number = 12;
+    const CELL_SIZE: number = Math.floor(screenHeight / TOTAL_ROWS);
+    const BOARD_PROPORTION: number = CELL_SIZE * TOTAL_COLS / screenWidth;
+    const COLUMN_PROPORTION: number = (1 - BOARD_PROPORTION) / 2;
     const grid = new GridSizer(this, {
-      column: totalCols,
-      row: totalRows
+      column: TOTAL_COLS,
+      row: TOTAL_ROWS
     });
     this.add.existing(grid);
 
-    for(let row = 0; row < totalRows; row++) {
-      for (let col = 0; col < totalCols; col++) {
+    for(let row = 0; row < TOTAL_ROWS; row++) {
+      for (let col = 0; col < TOTAL_COLS; col++) {
         const cell = new Cell(this, 0, 0);
 
         grid.add(cell, col, row);
@@ -55,10 +58,9 @@ export class MainScene extends Phaser.Scene {
 
     mainSizer
         // .add(this.add.zone(0, 0, 100, screenHeight),1)
-        .add(this.add.rectangle(0, 0, 100, screenHeight,0x00FABD),1)
-        .add(grid,3)
-        // .add(this.add.rectangle(0, 0, 100, screenHeight,0x068465),3, 'center')
-        .add(this.add.rectangle(0, 0, 100, screenHeight,0x6DBDAA),1)
+        .add(this.add.rectangle(0, 0, 100, screenHeight,0x00FABD), COLUMN_PROPORTION)
+        .add(grid, BOARD_PROPORTION)
+        .add(this.add.rectangle(0, 0, 100, screenHeight,0x6DBDAA), COLUMN_PROPORTION)
         .layout();
 
     // Create map
