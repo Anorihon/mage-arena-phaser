@@ -6,6 +6,10 @@
     "noImplicitAny": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src/**/*"],
+  "include": [
+    "src/**/*",
+    "**/*",
+    "node_modules/phaser3-rex-plugins-types"
+  ],
   "exclude": ["node_modules"]
 }
