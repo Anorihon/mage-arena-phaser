@@ -10,13 +10,19 @@ export class Cell extends Phaser.GameObjects.Container {
     private cellType: FieldTypes = FieldTypes.Field
     private highlight: Phaser.GameObjects.Rectangle
 
-    constructor(scene: Phaser.Scene, x: number, y: number) {
-        super(scene, x, y);
+    col: number
+    row: number
+
+
+    constructor(scene: Phaser.Scene, col: number, row: number) {
+        super(scene);
         
         const cellSize: number = Math.floor(scene.cameras.main.height / 12);
 
         this.width = cellSize;
         this.height = cellSize;
+        this.col = col;
+        this.row = row;
 
         // Create main texture
         this.bg = scene.add.image(0, 0, 'map', 'earth');
@@ -48,16 +54,6 @@ export class Cell extends Phaser.GameObjects.Container {
 
     get fieldType(): FieldTypes {
         return this.cellType;
-    }
-
-    get row(): number {
-        // @ts-ignore
-        return this.rexChess.tileXYZ.y;
-    }
-
-    get col(): number {
-        // @ts-ignore
-        return this.rexChess.tileXYZ.x;
     }
 
     setHighlight(visible: boolean, color?: number, alpha?: number) {
