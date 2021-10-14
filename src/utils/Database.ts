@@ -1,11 +1,19 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
 
+type Fraction = {
+    img: string,
+    squads: Array<string>
+}
+
 export default class Database {
     private static instance: Database
-    private readonly firebaseDB: any
+    private firebaseDB: any
 
-    constructor() {
+    public fractions = new Map<string, Fraction>();
+
+
+    private constructor() {
         // Initialize Firebase
         initializeApp({
             apiKey: "AIzaSyAAUpGOY7lBxacetipo7wSo2-Ks5vzdQM4",
@@ -27,13 +35,19 @@ export default class Database {
         return Database.instance;
     }
 
-    async getFractions () {
-        console.log('Get fractions');
+    async requestFractions() {
         const querySnapshot = await getDocs(collection(this.firebaseDB, "fractions"));
 
         querySnapshot.forEach(doc => {
             // doc.data() is never undefined for query doc snapshots
-            console.log(doc.id, " => ", doc.data());
+            // console.log(doc.id, " => ", doc.data().squads);
+            const data = doc.data();
+            const fractionData: Fraction = {
+                img: data.img,
+                squads: data.squads
+            };
+
+            this.fractions.set(data.short_name ? data.short_name : doc.id, fractionData);
         });
     }
 }

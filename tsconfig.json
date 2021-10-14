@@ -4,12 +4,14 @@
     "module": "CommonJS",
     "moduleResolution": "node",
     "noImplicitAny": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "allowJs": true
   },
   "include": [
     "src/**/*",
-    "**/*",
-    "node_modules/phaser3-rex-plugins-types"
+    "node_modules/phaser3-rex-plugins-types",
+    "node_modules/@firebase/firestore-types"
   ],
   "exclude": ["node_modules"]
 }

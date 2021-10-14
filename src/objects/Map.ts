@@ -3,7 +3,7 @@ import {Cell, FieldTypes} from "./Cell";
 import GameObject = Phaser.GameObjects.GameObject;
 import {TileXYType} from "phaser3-rex-plugins/plugins/board/types/Position";
 import Unit from "./Unit";
-import Database from "../utils/Database";
+
 
 export default class Map {
     static readonly ROWS: number = 12;
@@ -149,11 +149,6 @@ export default class Map {
         scene.input.keyboard.on('keyup-F', () => {
             this.flipBoard();
         });
-
-
-        const db: Database = Database.getInstance();
-
-        db.getFractions();
     }
 
     generate_grid(resetCells: boolean = false) {
