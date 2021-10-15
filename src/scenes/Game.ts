@@ -7,7 +7,7 @@ import Board from "../objects/Board";
 import ChooseSquad from "../ui/ChooseSquad";
 
 
-export class MainScene extends Phaser.Scene {
+export class Game extends Phaser.Scene {
   public rexUI: RexUIPlugin
 
   private bg: Phaser.GameObjects.Image // background image

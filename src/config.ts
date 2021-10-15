@@ -1,4 +1,4 @@
-import {MainScene} from './scenes/main-scene';
+import {Game} from './scenes/Game';
 import ScaleModes = Phaser.Scale.ScaleModes;
 import GrayScalePipelinePlugin from 'phaser3-rex-plugins/plugins/grayscalepipeline-plugin.js';
 import RexUIPlugin from 'phaser3-rex-plugins/templates/ui/ui-plugin.js';
@@ -12,7 +12,7 @@ export const GameConfig: Phaser.Types.Core.GameConfig = {
   backgroundColor: 0x3a404d,
   type: Phaser.AUTO,
   parent: 'game',
-  scene: [MainScene],
+  scene: [Game],
   scale: {
      mode: ScaleModes.RESIZE
   },
