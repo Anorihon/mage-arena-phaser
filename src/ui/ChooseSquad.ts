@@ -6,6 +6,8 @@ import GameObject = Phaser.GameObjects.GameObject;
 export default class ChooseSquad extends GridSizer {
     private static readonly columnProportions: Array<number> = [.2, .8]
     private static readonly rowProportions: Array<number> = [.3, .7]
+    private cards: Array<Phaser.GameObjects.Image> = []
+    private fullViewCard: Phaser.GameObjects.Image
 
     constructor(scene: Phaser.Scene) {
         super(scene, {
@@ -27,6 +29,9 @@ export default class ChooseSquad extends GridSizer {
 
         // Fractions block
         db.requestFractions().then(() => {
+            this.createHeroesCards();
+            this.createCardView();
+
             // Fractions list
             const fractionsButtons: Array<GameObject> = [];
             let firstFractionKey: string = '';
@@ -101,9 +106,6 @@ export default class ChooseSquad extends GridSizer {
             });
             squadsPages.swapPage(firstFractionKey);
 
-            this.createHeroesCards();
-            this.createCardView();
-
             this.onResize();
         });
 
@@ -112,8 +114,6 @@ export default class ChooseSquad extends GridSizer {
 
     private createHeroesCards() {
         const MAX_CARDS: number = 6;
-        const cards: Array<GameObject> = [];
-
         const { height: screenHeight } = this.scene.cameras.main;
         const boxHeight: number = screenHeight * ChooseSquad.rowProportions[0];
         const cardHeightMod: number = .85;
@@ -124,14 +124,14 @@ export default class ChooseSquad extends GridSizer {
             card.displayHeight = boxHeight * cardHeightMod;
             card.scaleX = card.scaleY;
 
-            cards.push(card);
+            this.cards.push(card);
         }
 
         const heroes = new Buttons(this.scene, {
             orientation: 'x',
             align: 'center',
             space: { left: 0, right: 0, top: 0, bottom: 0, item: 10 },
-            buttons: cards,
+            buttons: this.cards,
             expand: false
         })
             .layout();
@@ -152,10 +152,10 @@ export default class ChooseSquad extends GridSizer {
         });
         const boxHeight: number = screenHeight * ChooseSquad.rowProportions[1];
         const cardHeightMod: number = .85;
-        const card: Phaser.GameObjects.Image = this.scene.add.image(0, 0, 'hero');
-
-        card.displayHeight = boxHeight * cardHeightMod;
-        card.scaleX = card.scaleY;
+        
+        this.fullViewCard = this.scene.add.image(0, 0, 'hero');
+        this.fullViewCard.displayHeight = boxHeight * cardHeightMod;
+        this.fullViewCard.scaleX = this.fullViewCard.scaleY;
 
         const button: Label = new Label(this.scene, {
             width: 200,
@@ -174,7 +174,7 @@ export default class ChooseSquad extends GridSizer {
         });
 
         box
-            .add(card)
+            .add(this.fullViewCard)
             .add(button)
             .layout();
 
