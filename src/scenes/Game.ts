@@ -5,6 +5,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
 import Board from "../objects/Board";
 import ChooseSquad from "../ui/ChooseSquad";
+import Database from "../utils/Database";
 
 
 export class Game extends Phaser.Scene {
@@ -24,12 +25,16 @@ export class Game extends Phaser.Scene {
     this.load.image('button', '../assets/img/button.png');
     this.load.atlas('map', '../assets/map.png', '../assets/map.json');
     this.load.atlas('fractions', '../assets/img/fractions.png', '../assets/img/fractions.json');
+    this.load.json('db', '../assets/data/db.json');
   }
 
   create(): void {
     const totalRows: number = 1;
     const totalCols: number = 3;
     const { width: screenWidth, height: screenHeight } = this.cameras.main;
+
+    // Init Database
+    Database.init(this);
 
     this.mainLayout = new GridSizer(this,{
       column: totalCols,

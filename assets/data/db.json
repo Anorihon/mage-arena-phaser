@@ -1,0 +1,2954 @@
+﻿{
+  "fractions": [
+    {
+      "id": 1,
+      "name": "Гильдия Вольных Стрелков",
+      "img": "free_archers",
+      "squads": [
+        "Дивизион \"Шервуд\"",
+        "Био-киборги \"Шерифы\"",
+        "Дружина \"Беркут\"",
+        "Дозорный отряд \"Вепрь\"",
+        "Рота \"Версаль\"",
+        "Бригада \"Псы войны\"",
+        "Дружина \"Пушкари\"",
+        "Отряд \"Родезия\"",
+        "Легион \"Сатурн\""
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Колдун",
+      "img": "Hippogryph",
+      "squads": [
+        "Отряд \"Ятаган\"",
+        "Рота \"Варяг\"",
+        "Рота \"Гренадеры\"",
+        "Суперкиборги \"Гуроны\"",
+        "Орден \"Зигфрид\"",
+        "Дивизион \"Кайзер\"",
+        "Корпус \"Кондор\"",
+        "Рота \"Матадор\"",
+        "Штурм-корпус \"Нептун\"",
+        "Рота \"Норман\""
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Некромант",
+      "img": "Necromancer",
+      "squads": [
+        "Штурм-бат \"Ураган\"",
+        "Некроклан \"Фобос\"",
+        "Развед-отряд \"Цунами\"",
+        "Орден \"Кентавр\"",
+        "Гоблин-рота \"Кобра\"",
+        "Легион \"Магнум\"",
+        "Гоблин-рота \"Питон\"",
+        "Некро-киборги \"Скелетоны\"",
+        "Корпус \"Торнадо\"",
+        "Ударный взвод \"Титан\""
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Чародей",
+      "img": "Sorcerer_Guard",
+      "squads": [
+        "Легион \"Центурион\"",
+        "Батальон \"Эспада\"",
+        "Легион \"Амазонки\"",
+        "Батальон \"Бородино\"",
+        "Рота \"Марсель\"",
+        "Бригада \"Посейдон\"",
+        "Дружина \"Сокол\"",
+        "Взвод \"Сталинград\"",
+        "Осадный легион \"Тайфун\""
+      ]
+    }
+  ],
+  "units": [
+    {
+      "fractionId": 1,
+      "squadName": "Дивизион \"Шервуд\"",
+      "unitName": "Валлиец",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "11_04.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        25
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Дивизион \"Шервуд\"",
+      "unitName": "Весельчак Вилли",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "11_07.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        25
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Дивизион \"Шервуд\"",
+      "unitName": "Джон Мщу-За-Всех",
+      "hit": 2,
+      "hp": 1,
+      "magicDef": 3,
+      "pic": "11_06.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        43,
+        25
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Дивизион \"Шервуд\"",
+      "unitName": "Йомен",
+      "hit": 2,
+      "hp": 1,
+      "magicDef": 1,
+      "pic": "11_09.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        25
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Дивизион \"Шервуд\"",
+      "unitName": "Сквайр",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "11_08.png",
+      "shootAccuracy": 3,
+      "shootRange": 1,
+      "spells": [
+        25
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Био-киборги \"Шерифы\"",
+      "unitName": "Кибер-ковбой",
+      "hit": 2,
+      "hp": 4,
+      "magicDef": 0,
+      "pic": "11_12.png",
+      "shootAccuracy": 2,
+      "shootRange": 2,
+      "spells": []
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Био-киборги \"Шерифы\"",
+      "unitName": "Кибер-коп",
+      "hit": 2,
+      "hp": 4,
+      "magicDef": 0,
+      "pic": "11_13.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        20
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Био-киборги \"Шерифы\"",
+      "unitName": "Кибер-лейтенант",
+      "hit": 2,
+      "hp": 4,
+      "magicDef": -1,
+      "pic": "11_11.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        15,
+        20
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Био-киборги \"Шерифы\"",
+      "unitName": "Кибер-сержант",
+      "hit": 3,
+      "hp": 4,
+      "magicDef": -1,
+      "pic": "11_14.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": []
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Дружина \"Беркут\"",
+      "unitName": "Беор",
+      "hit": 2,
+      "hp": 1,
+      "magicDef": 1,
+      "pic": "1_10.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        7
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Дружина \"Беркут\"",
+      "unitName": "Волкудлак",
+      "hit": 2,
+      "hp": 1,
+      "magicDef": 2,
+      "pic": "1_09.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        44
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Дружина \"Беркут\"",
+      "unitName": "Дан Рогатина",
+      "hit": 1,
+      "hp": 1,
+      "magicDef": 1,
+      "pic": "1_07.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        7
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Дружина \"Беркут\"",
+      "unitName": "Кор Секира",
+      "hit": 2,
+      "hp": 1,
+      "magicDef": 1,
+      "pic": "1_08.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        3
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Дружина \"Беркут\"",
+      "unitName": "Луд Лекарь",
+      "hit": 0,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "1_11.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        26,
+        10
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Дружина \"Беркут\"",
+      "unitName": "Мирдинн",
+      "hit": 2,
+      "hp": 1,
+      "magicDef": 1,
+      "pic": "1_06.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        20
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Дозорный отряд \"Вепрь\"",
+      "unitName": "Вождь-Сын Волка",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "2_12.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        34,
+        15
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Дозорный отряд \"Вепрь\"",
+      "unitName": "Косматый Бык",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "2_07.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        34
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Дозорный отряд \"Вепрь\"",
+      "unitName": "Мамонтобой",
+      "hit": 0,
+      "hp": 2,
+      "magicDef": 3,
+      "pic": "2_09.png",
+      "shootAccuracy": 3,
+      "shootRange": 3,
+      "spells": [
+        34
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Дозорный отряд \"Вепрь\"",
+      "unitName": "Пещерный Медведь",
+      "hit": 0,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "2_11.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        1
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Дозорный отряд \"Вепрь\"",
+      "unitName": "Черная скала",
+      "hit": 0,
+      "hp": 2,
+      "magicDef": 3,
+      "pic": "2_08.png",
+      "shootAccuracy": 3,
+      "shootRange": 1,
+      "spells": [
+        34
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Рота \"Версаль\"",
+      "unitName": "Бретер",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "2_16.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        47
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Рота \"Версаль\"",
+      "unitName": "Виконт де Ту",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "2_13.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        46
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Рота \"Версаль\"",
+      "unitName": "Капитан мушкетёров",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "2_14.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        2,
+        5
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Рота \"Версаль\"",
+      "unitName": "Королевский Мушкетер",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 4,
+      "pic": "2_18.png",
+      "shootAccuracy": 3,
+      "shootRange": 4,
+      "spells": []
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Рота \"Версаль\"",
+      "unitName": "Новобранец",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "2_17.png",
+      "shootAccuracy": 3,
+      "shootRange": 3,
+      "spells": []
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Бригада \"Псы войны\"",
+      "unitName": "Гарри Ржавый Гвоздь",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "7_04.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        39,
+        3
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Бригада \"Псы войны\"",
+      "unitName": "Джонни Скорпио",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 2,
+      "pic": "7_06.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": []
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Бригада \"Псы войны\"",
+      "unitName": "Крейзи Смит",
+      "hit": 3,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "7_02.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        39
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Бригада \"Псы войны\"",
+      "unitName": "Роджер Взломщик",
+      "hit": 1,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "7_01.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        3
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Бригада \"Псы войны\"",
+      "unitName": "Ядовитый Чарли",
+      "hit": 1,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "7_03.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        39
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Дружина \"Пушкари\"",
+      "unitName": "Бомбардир",
+      "hit": 1,
+      "hp": 3,
+      "magicDef": 2,
+      "pic": "7_08.png",
+      "shootAccuracy": 3,
+      "shootRange": 1,
+      "spells": [
+        3
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Дружина \"Пушкари\"",
+      "unitName": "Ездовой",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "7_09.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        45
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Дружина \"Пушкари\"",
+      "unitName": "Заряжающий",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "7_12.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        45
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Дружина \"Пушкари\"",
+      "unitName": "Канонир",
+      "hit": 1,
+      "hp": 3,
+      "magicDef": 2,
+      "pic": "7_11.png",
+      "shootAccuracy": 3,
+      "shootRange": 1,
+      "spells": [
+        10,
+        26
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Дружина \"Пушкари\"",
+      "unitName": "Фейрверкер",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "7_07.png",
+      "shootAccuracy": 3,
+      "shootRange": 1,
+      "spells": []
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Отряд \"Родезия\"",
+      "unitName": "Капрал Хиггинс",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "7_17.png",
+      "shootAccuracy": 5,
+      "shootRange": 4,
+      "spells": []
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Отряд \"Родезия\"",
+      "unitName": "Лейтенант Уорвик",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "7_14.png",
+      "shootAccuracy": 4,
+      "shootRange": 4,
+      "spells": [
+        40
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Отряд \"Родезия\"",
+      "unitName": "Майор Гроувс",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "7_18.png",
+      "shootAccuracy": 3,
+      "shootRange": 5,
+      "spells": [
+        40,
+        25
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Отряд \"Родезия\"",
+      "unitName": "Сержант Уильямс",
+      "hit": 0,
+      "hp": 2,
+      "magicDef": 0,
+      "pic": "7_13.png",
+      "shootAccuracy": 4,
+      "shootRange": 6,
+      "spells": [
+        40
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Отряд \"Родезия\"",
+      "unitName": "Шотландский стрелок",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 0,
+      "pic": "7_16.png",
+      "shootAccuracy": 4,
+      "shootRange": 4,
+      "spells": []
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Легион \"Сатурн\"",
+      "unitName": "Легат",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 0,
+      "pic": "8_02.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        15,
+        5
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Легион \"Сатурн\"",
+      "unitName": "Ликтор",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 2,
+      "pic": "8_03.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        41
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Легион \"Сатурн\"",
+      "unitName": "Принципий",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "7_19.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        41
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Легион \"Сатурн\"",
+      "unitName": "Триарий",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 2,
+      "pic": "8_01.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        42
+      ]
+    },
+    {
+      "fractionId": 1,
+      "squadName": "Легион \"Сатурн\"",
+      "unitName": "Центурион",
+      "hit": 3,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "8_04.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": []
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Отряд \"Ятаган\"",
+      "unitName": "Али-Лучник",
+      "hit": 1,
+      "hp": 1,
+      "magicDef": 1,
+      "pic": "12_02.png",
+      "shootAccuracy": 3,
+      "shootRange": 3,
+      "spells": [
+        1
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Отряд \"Ятаган\"",
+      "unitName": "Махмуд Левантиец",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "12_03.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": []
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Отряд \"Ятаган\"",
+      "unitName": "Уз-Баши",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "12_04.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        1,
+        14
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Рота \"Варяг\"",
+      "unitName": "Бьярни Полярный Медведь",
+      "hit": 3,
+      "hp": 3,
+      "magicDef": 2,
+      "pic": "2_01.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        31
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Рота \"Варяг\"",
+      "unitName": "Свен Бурый Медведь",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "2_02.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        3
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Рота \"Варяг\"",
+      "unitName": "Скальд",
+      "hit": 0,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "2_04.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        13,
+        22
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Рота \"Варяг\"",
+      "unitName": "Хельги Волосатые Штаны",
+      "hit": 3,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "2_03.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        13,
+        3
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Рота \"Варяг\"",
+      "unitName": "Эрик Кровавый Топор",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 2,
+      "pic": "2_06.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": []
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Рота \"Гренадеры\"",
+      "unitName": "Капрал",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "3_02.png",
+      "shootAccuracy": 4,
+      "shootRange": 1,
+      "spells": [
+        23
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Рота \"Гренадеры\"",
+      "unitName": "Рядовой",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "3_03.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        49
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Рота \"Гренадеры\"",
+      "unitName": "Унтер-офицер",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "2_19.png",
+      "shootAccuracy": 4,
+      "shootRange": 1,
+      "spells": [
+        23,
+        5
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Рота \"Гренадеры\"",
+      "unitName": "Фельдфебель",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "3_01.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        23
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Рота \"Гренадеры\"",
+      "unitName": "Фурьер",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "3_04.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        49
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Суперкиборги \"Гуроны\"",
+      "unitName": "Верная Рука",
+      "hit": 2,
+      "hp": 4,
+      "magicDef": 0,
+      "pic": "3_09.png",
+      "shootAccuracy": 3,
+      "shootRange": 3,
+      "spells": [
+        20
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Суперкиборги \"Гуроны\"",
+      "unitName": "Ирокез",
+      "hit": 2,
+      "hp": 4,
+      "magicDef": 1,
+      "pic": "3_07.png",
+      "shootAccuracy": 3,
+      "shootRange": 3,
+      "spells": []
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Суперкиборги \"Гуроны\"",
+      "unitName": "Старый Гризли",
+      "hit": 2,
+      "hp": 4,
+      "magicDef": 3,
+      "pic": "3_08.png",
+      "shootAccuracy": 3,
+      "shootRange": 3,
+      "spells": []
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Суперкиборги \"Гуроны\"",
+      "unitName": "Старый Шаман Зу",
+      "hit": 3,
+      "hp": 4,
+      "magicDef": 0,
+      "pic": "3_06.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        29,
+        30
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Орден \"Зигфрид\"",
+      "unitName": "Гроссмейстер Ордена",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 2,
+      "pic": "3_13.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        27,
+        28
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Орден \"Зигфрид\"",
+      "unitName": "Комтур Ордена",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "3_14.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        28
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Орден \"Зигфрид\"",
+      "unitName": "Латник Ордена",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "3_16.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        24
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Орден \"Зигфрид\"",
+      "unitName": "Послушник Ордена",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "3_12.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        24
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Орден \"Зигфрид\"",
+      "unitName": "Рыцарь Ордена",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 2,
+      "pic": "3_11.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        5
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Дивизион \"Кайзер\"",
+      "unitName": "Гауптманн Фон Шмютц",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "3_17.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        16,
+        32
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Дивизион \"Кайзер\"",
+      "unitName": "Рядовой Шнидтке",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "3_19.png",
+      "shootAccuracy": 4,
+      "shootRange": 4,
+      "spells": []
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Дивизион \"Кайзер\"",
+      "unitName": "Фельдфебель Кранк",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "3_18.png",
+      "shootAccuracy": 4,
+      "shootRange": 4,
+      "spells": [
+        32
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Корпус \"Кондор\"",
+      "unitName": "Арапалька Костяной Лук",
+      "hit": 0,
+      "hp": 1,
+      "magicDef": 4,
+      "pic": "4_17.png",
+      "shootAccuracy": 3,
+      "shootRange": 3,
+      "spells": []
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Корпус \"Кондор\"",
+      "unitName": "Вождь Антуко",
+      "hit": 1,
+      "hp": 1,
+      "magicDef": 0,
+      "pic": "4_16.png",
+      "shootAccuracy": 3,
+      "shootRange": 4,
+      "spells": [
+        26,
+        15
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Корпус \"Кондор\"",
+      "unitName": "Команданте Хосе",
+      "hit": 0,
+      "hp": 1,
+      "magicDef": 1,
+      "pic": "4_12.png",
+      "shootAccuracy": 3,
+      "shootRange": 5,
+      "spells": []
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Корпус \"Кондор\"",
+      "unitName": "Кровавый Жшец",
+      "hit": 2,
+      "hp": 1,
+      "magicDef": 1,
+      "pic": "4_14.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        5
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Корпус \"Кондор\"",
+      "unitName": "Матаба Плюющаяся Гадюка",
+      "hit": 0,
+      "hp": 1,
+      "magicDef": 1,
+      "pic": "4_13.png",
+      "shootAccuracy": 3,
+      "shootRange": 3,
+      "spells": [
+        14
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Рота \"Матадор\"",
+      "unitName": "Алебардист",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "5_16.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": []
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Рота \"Матадор\"",
+      "unitName": "Аркебузир",
+      "hit": 1,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "5_13.png",
+      "shootAccuracy": 3,
+      "shootRange": 4,
+      "spells": [
+        19
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Рота \"Матадор\"",
+      "unitName": "Знаменосец",
+      "hit": 1,
+      "hp": 3,
+      "magicDef": 2,
+      "pic": "5_12.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        16
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Рота \"Матадор\"",
+      "unitName": "Капитан роты",
+      "hit": 1,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "5_11.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        19,
+        15
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Рота \"Матадор\"",
+      "unitName": "Рядовой",
+      "hit": 1,
+      "hp": 3,
+      "magicDef": 2,
+      "pic": "5_14.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": []
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Штурм-корпус \"Нептун\"",
+      "unitName": "Генри Абордаж",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "6_01.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": []
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Штурм-корпус \"Нептун\"",
+      "unitName": "Джимми Покер",
+      "hit": 0,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "6_02.png",
+      "shootAccuracy": 3,
+      "shootRange": 3,
+      "spells": [
+        20
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Штурм-корпус \"Нептун\"",
+      "unitName": "Канонир Пью",
+      "hit": 0,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "5_19.png",
+      "shootAccuracy": 3,
+      "shootRange": 4,
+      "spells": []
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Штурм-корпус \"Нептун\"",
+      "unitName": "Одноногий Шарки",
+      "hit": -1,
+      "hp": 2,
+      "magicDef": 0,
+      "pic": "5_17.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        25,
+        26
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Штурм-корпус \"Нептун\"",
+      "unitName": "Чарли Наваха",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "5_18.png",
+      "shootAccuracy": 4,
+      "shootRange": 1,
+      "spells": [
+        49
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Штурм-корпус \"Нептун\"",
+      "unitName": "Черный Пёс",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "6_03.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        25
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Рота \"Норман\"",
+      "unitName": "Викинг-лучник",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "6_07.png",
+      "shootAccuracy": 3,
+      "shootRange": 3,
+      "spells": []
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Рота \"Норман\"",
+      "unitName": "Нигвар Белобородый",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "6_06.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        15
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Рота \"Норман\"",
+      "unitName": "Ролло Длинный Меч",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "6_04.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        13
+      ]
+    },
+    {
+      "fractionId": 2,
+      "squadName": "Рота \"Норман\"",
+      "unitName": "Ян Трельфи Морж",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 3,
+      "pic": "6_08.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        13,
+        15
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Штурм-бат \"Ураган\"",
+      "unitName": "Космодесантник",
+      "hit": 0,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "10_01.png",
+      "shootAccuracy": 4,
+      "shootRange": 5,
+      "spells": [
+        36
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Штурм-бат \"Ураган\"",
+      "unitName": "Огнеметчик",
+      "hit": 0,
+      "hp": 3,
+      "magicDef": 2,
+      "pic": "10_03.png",
+      "shootAccuracy": 4,
+      "shootRange": 5,
+      "spells": [
+        36
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Штурм-бат \"Ураган\"",
+      "unitName": "Пулеметчик",
+      "hit": 0,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "10_07.png",
+      "shootAccuracy": 4,
+      "shootRange": 5,
+      "spells": []
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Штурм-бат \"Ураган\"",
+      "unitName": "Разведчик",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "10_06.png",
+      "shootAccuracy": 4,
+      "shootRange": 3,
+      "spells": [
+        36
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Штурм-бат \"Ураган\"",
+      "unitName": "Синий Лидер",
+      "hit": 0,
+      "hp": 3,
+      "magicDef": 2,
+      "pic": "10_04.png",
+      "shootAccuracy": 4,
+      "shootRange": 1,
+      "spells": [
+        36,
+        23
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Штурм-бат \"Ураган\"",
+      "unitName": "Снайпер",
+      "hit": 0,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "10_02.png",
+      "shootAccuracy": 4,
+      "shootRange": 5,
+      "spells": []
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Некроклан \"Фобос\"",
+      "unitName": "Киборг NX-10",
+      "hit": 2,
+      "hp": 4,
+      "magicDef": 2,
+      "pic": "10_09.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": []
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Некроклан \"Фобос\"",
+      "unitName": "Киборг NX-2B",
+      "hit": 3,
+      "hp": 4,
+      "magicDef": 3,
+      "pic": "10_08.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": []
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Некроклан \"Фобос\"",
+      "unitName": "Киборг NX-7H",
+      "hit": 2,
+      "hp": 4,
+      "magicDef": -1,
+      "pic": "10_11.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": []
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Развед-отряд \"Цунами\"",
+      "unitName": "Масамори",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "11_01.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        14
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Развед-отряд \"Цунами\"",
+      "unitName": "Оясан",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 0,
+      "pic": "10_18.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        14,
+        48
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Развед-отряд \"Цунами\"",
+      "unitName": "Танто",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 0,
+      "pic": "11_02.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        14
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Развед-отряд \"Цунами\"",
+      "unitName": "Хашими",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "10_19.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        14
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Развед-отряд \"Цунами\"",
+      "unitName": "Якудза",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "11_03.png",
+      "shootAccuracy": 3,
+      "shootRange": 3,
+      "spells": [
+        48
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Орден \"Кентавр\"",
+      "unitName": "Командор-тамплиер",
+      "hit": 3,
+      "hp": 3,
+      "magicDef": 0,
+      "pic": "4_04.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        9
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Орден \"Кентавр\"",
+      "unitName": "Рыцарь Хуго",
+      "hit": 3,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "4_01.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        9,
+        38
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Орден \"Кентавр\"",
+      "unitName": "Рыцарь-Тамплиер",
+      "hit": 3,
+      "hp": 3,
+      "magicDef": 2,
+      "pic": "4_06.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        9
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Орден \"Кентавр\"",
+      "unitName": "Рыцарь-тамплиер",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "4_03.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        9
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Орден \"Кентавр\"",
+      "unitName": "Эрваль",
+      "hit": 1,
+      "hp": 3,
+      "magicDef": 2,
+      "pic": "4_02.png",
+      "shootAccuracy": 3,
+      "shootRange": 4,
+      "spells": [
+        9
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Гоблин-рота \"Кобра\"",
+      "unitName": "Азог",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 0,
+      "pic": "4_11.png",
+      "shootAccuracy": 3,
+      "shootRange": 5,
+      "spells": [
+        50
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Гоблин-рота \"Кобра\"",
+      "unitName": "Гмог",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 0,
+      "pic": "4_07.png",
+      "shootAccuracy": 3,
+      "shootRange": 5,
+      "spells": [
+        50
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Гоблин-рота \"Кобра\"",
+      "unitName": "Гоблин -пулеметчик",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "4_08.png",
+      "shootAccuracy": 4,
+      "shootRange": 6,
+      "spells": [
+        50
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Гоблин-рота \"Кобра\"",
+      "unitName": "Гоблин-Вожак",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 0,
+      "pic": "4_09.png",
+      "shootAccuracy": 3,
+      "shootRange": 5,
+      "spells": [
+        50,
+        1
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Легион \"Магнум\"",
+      "unitName": "Бульдог",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "4_19.png",
+      "shootAccuracy": 3,
+      "shootRange": 3,
+      "spells": []
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Легион \"Магнум\"",
+      "unitName": "Люггер",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 0,
+      "pic": "5_03.png",
+      "shootAccuracy": 4,
+      "shootRange": 4,
+      "spells": []
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Легион \"Магнум\"",
+      "unitName": "Фоккер",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "4_18.png",
+      "shootAccuracy": 4,
+      "shootRange": 3,
+      "spells": [
+        33,
+        3
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Легион \"Магнум\"",
+      "unitName": "Шмайссер",
+      "hit": 0,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "5_02.png",
+      "shootAccuracy": 4,
+      "shootRange": 5,
+      "spells": []
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Легион \"Магнум\"",
+      "unitName": "Штайер",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "5_01.png",
+      "shootAccuracy": 3,
+      "shootRange": 3,
+      "spells": [
+        3
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Гоблин-рота \"Питон\"",
+      "unitName": "Артог",
+      "hit": 2,
+      "hp": 4,
+      "magicDef": 0,
+      "pic": "6_12.png",
+      "shootAccuracy": 3,
+      "shootRange": 5,
+      "spells": []
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Гоблин-рота \"Питон\"",
+      "unitName": "Горбаг",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 0,
+      "pic": "6_13.png",
+      "shootAccuracy": 5,
+      "shootRange": 4,
+      "spells": []
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Гоблин-рота \"Питон\"",
+      "unitName": "Гулук",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "6_09.png",
+      "shootAccuracy": 5,
+      "shootRange": 4,
+      "spells": [
+        50,
+        20
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Гоблин-рота \"Питон\"",
+      "unitName": "Шагат",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 0,
+      "pic": "6_11.png",
+      "shootAccuracy": 4,
+      "shootRange": 6,
+      "spells": []
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Некро-киборги \"Скелетоны\"",
+      "unitName": "Агни",
+      "hit": 3,
+      "hp": 4,
+      "magicDef": 1,
+      "pic": "8_07.png",
+      "shootAccuracy": 3,
+      "shootRange": 2,
+      "spells": [
+        37
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Некро-киборги \"Скелетоны\"",
+      "unitName": "Кундалаи",
+      "hit": 2,
+      "hp": 4,
+      "magicDef": -1,
+      "pic": "8_09.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        37
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Некро-киборги \"Скелетоны\"",
+      "unitName": "Чанди",
+      "hit": 3,
+      "hp": 4,
+      "magicDef": 0,
+      "pic": "8_06.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        37
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Некро-киборги \"Скелетоны\"",
+      "unitName": "Шакья",
+      "hit": 4,
+      "hp": 4,
+      "magicDef": 1,
+      "pic": "8_08.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        37
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Корпус \"Торнадо\"",
+      "unitName": "Волк-в-засаде",
+      "hit": -1,
+      "hp": 1,
+      "magicDef": 1,
+      "pic": "9_19.png",
+      "shootAccuracy": 4,
+      "shootRange": 6,
+      "spells": []
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Корпус \"Торнадо\"",
+      "unitName": "Ичонк сын Ягуара",
+      "hit": -1,
+      "hp": 1,
+      "magicDef": 2,
+      "pic": "9_16.png",
+      "shootAccuracy": 4,
+      "shootRange": 6,
+      "spells": []
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Корпус \"Торнадо\"",
+      "unitName": "Огненный Шмель",
+      "hit": 1,
+      "hp": 1,
+      "magicDef": 2,
+      "pic": "9_13.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        7
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Корпус \"Торнадо\"",
+      "unitName": "Хитрый Койот",
+      "hit": 1,
+      "hp": 1,
+      "magicDef": 1,
+      "pic": "9_14.png",
+      "shootAccuracy": 3,
+      "shootRange": 4,
+      "spells": [
+        1
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Корпус \"Торнадо\"",
+      "unitName": "Черный буйвол",
+      "hit": -1,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "9_18.png",
+      "shootAccuracy": 4,
+      "shootRange": 6,
+      "spells": [
+        4
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Корпус \"Торнадо\"",
+      "unitName": "Шаман",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "9_17.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        35,
+        4
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Ударный взвод \"Титан\"",
+      "unitName": "Антей",
+      "hit": 1,
+      "hp": 3,
+      "magicDef": -1,
+      "pic": "9_11.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        3,
+        34
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Ударный взвод \"Титан\"",
+      "unitName": "Бриарей",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "9_09.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        34
+      ]
+    },
+    {
+      "fractionId": 3,
+      "squadName": "Ударный взвод \"Титан\"",
+      "unitName": "Котт",
+      "hit": 0,
+      "hp": 3,
+      "magicDef": 2,
+      "pic": "9_12.png",
+      "shootAccuracy": 4,
+      "shootRange": 3,
+      "spells": [
+        34
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Легион \"Центурион\"",
+      "unitName": "Лейтенант Габриель Смит",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 0,
+      "pic": "10_16.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        8
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Легион \"Центурион\"",
+      "unitName": "Лейтенант Джонатан Фогель",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 0,
+      "pic": "10_17.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        6
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Легион \"Центурион\"",
+      "unitName": "Лейтенант Иванов",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 0,
+      "pic": "10_14.png",
+      "shootAccuracy": 4,
+      "shootRange": 3,
+      "spells": [
+        7
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Легион \"Центурион\"",
+      "unitName": "Майор Добсон",
+      "hit": 0,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "10_12.png",
+      "shootAccuracy": 4,
+      "shootRange": 4,
+      "spells": [
+        6,
+        3
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Легион \"Центурион\"",
+      "unitName": "Старший лейтенант Диксон",
+      "hit": 0,
+      "hp": 2,
+      "magicDef": 0,
+      "pic": "10_13.png",
+      "shootAccuracy": 4,
+      "shootRange": 3,
+      "spells": [
+        6
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Батальон \"Эспада\"",
+      "unitName": "Дон Алонсо",
+      "hit": 1,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "12_01.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        1
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Батальон \"Эспада\"",
+      "unitName": "Дон Эстебан",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 2,
+      "pic": "11_19.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        1
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Батальон \"Эспада\"",
+      "unitName": "Идальго",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "11_18.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        1
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Батальон \"Эспада\"",
+      "unitName": "Сеньор Диас",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "11_16.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        2,
+        1
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Батальон \"Эспада\"",
+      "unitName": "Хуан Кастилец",
+      "hit": 3,
+      "hp": 3,
+      "magicDef": 2,
+      "pic": "11_17.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        3
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Легион \"Амазонки\"",
+      "unitName": "Дара",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 0,
+      "pic": "1_02.png",
+      "shootAccuracy": 3,
+      "shootRange": 1,
+      "spells": [
+        11,
+        7
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Легион \"Амазонки\"",
+      "unitName": "Дейдре",
+      "hit": 3,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "1_04.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": []
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Легион \"Амазонки\"",
+      "unitName": "Льювилла",
+      "hit": 1,
+      "hp": 3,
+      "magicDef": 0,
+      "pic": "1_03.png",
+      "shootAccuracy": 3,
+      "shootRange": 1,
+      "spells": [
+        11
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Легион \"Амазонки\"",
+      "unitName": "Фиона",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "1_05.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": []
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Легион \"Амазонки\"",
+      "unitName": "Флоримель",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 0,
+      "pic": "1_01.png",
+      "shootAccuracy": 3,
+      "shootRange": 3,
+      "spells": [
+        11
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Батальон \"Бородино\"",
+      "unitName": "Барабанщик",
+      "hit": 0,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "1_13.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        9,
+        5
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Батальон \"Бородино\"",
+      "unitName": "Ветеран Аустерлица",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "1_14.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        10
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Батальон \"Бородино\"",
+      "unitName": "Знаменосец",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "1_12.png",
+      "shootAccuracy": 3,
+      "shootRange": 1,
+      "spells": [
+        16
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Батальон \"Бородино\"",
+      "unitName": "Капрал",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "1_15.png",
+      "shootAccuracy": 3,
+      "shootRange": 1,
+      "spells": [
+        18,
+        19
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Батальон \"Бородино\"",
+      "unitName": "Фузилер",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "1_16.png",
+      "shootAccuracy": 4,
+      "shootRange": 4,
+      "spells": []
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Рота \"Марсель\"",
+      "unitName": "Капитан Роты",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 0,
+      "pic": "5_07.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        4,
+        5
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Рота \"Марсель\"",
+      "unitName": "Капрал Роты",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "5_06.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": []
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Рота \"Марсель\"",
+      "unitName": "Лейтенант Роты",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "5_08.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        3
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Рота \"Марсель\"",
+      "unitName": "Мушкетер Роты",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "5_09.png",
+      "shootAccuracy": 3,
+      "shootRange": 3,
+      "spells": []
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Рота \"Марсель\"",
+      "unitName": "Учитель фехтования",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "5_04.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        2
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Бригада \"Посейдон\"",
+      "unitName": "Капитан Черная Борода",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "6_14.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        17
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Бригада \"Посейдон\"",
+      "unitName": "Квартермейстер",
+      "hit": 2,
+      "hp": 1,
+      "magicDef": 1,
+      "pic": "6_19.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        49
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Бригада \"Посейдон\"",
+      "unitName": "Пират",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 0,
+      "pic": "6_18.png",
+      "shootAccuracy": 4,
+      "shootRange": 4,
+      "spells": [
+        49
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Бригада \"Посейдон\"",
+      "unitName": "Старый Боцман",
+      "hit": 3,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "6_17.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        7
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Бригада \"Посейдон\"",
+      "unitName": "Флибустьер",
+      "hit": 2,
+      "hp": 2,
+      "magicDef": 0,
+      "pic": "6_16.png",
+      "shootAccuracy": 3,
+      "shootRange": 4,
+      "spells": []
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Дружина \"Сокол\"",
+      "unitName": "Копейщик",
+      "hit": 2,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "8_16.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": []
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Дружина \"Сокол\"",
+      "unitName": "Ополченец",
+      "hit": 1,
+      "hp": 3,
+      "magicDef": 2,
+      "pic": "8_11.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        5
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Дружина \"Сокол\"",
+      "unitName": "Путята",
+      "hit": 1,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "8_13.png",
+      "shootAccuracy": 3,
+      "shootRange": 3,
+      "spells": [
+        10
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Дружина \"Сокол\"",
+      "unitName": "Тур",
+      "hit": 3,
+      "hp": 4,
+      "magicDef": 2,
+      "pic": "8_14.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        20,
+        19
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Дружина \"Сокол\"",
+      "unitName": "Щитник",
+      "hit": 3,
+      "hp": 4,
+      "magicDef": 2,
+      "pic": "8_12.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        10
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Взвод \"Сталинград\"",
+      "unitName": "Бронебойщик",
+      "hit": 0,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "9_01.png",
+      "shootAccuracy": 5,
+      "shootRange": 1,
+      "spells": [
+        15
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Взвод \"Сталинград\"",
+      "unitName": "Лейтенант Петров",
+      "hit": 0,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "8_17.png",
+      "shootAccuracy": 3,
+      "shootRange": 3,
+      "spells": [
+        21
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Взвод \"Сталинград\"",
+      "unitName": "Минометчик",
+      "hit": -1,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "8_19.png",
+      "shootAccuracy": 3,
+      "shootRange": 8,
+      "spells": []
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Взвод \"Сталинград\"",
+      "unitName": "Политрук",
+      "hit": 0,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "8_18.png",
+      "shootAccuracy": 4,
+      "shootRange": 5,
+      "spells": [
+        21
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Осадный легион \"Тайфун\"",
+      "unitName": "Гранатомётчик",
+      "hit": 0,
+      "hp": 3,
+      "magicDef": 1,
+      "pic": "9_02.png",
+      "shootAccuracy": 4,
+      "shootRange": 5,
+      "spells": []
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Осадный легион \"Тайфун\"",
+      "unitName": "Командир террористов",
+      "hit": 1,
+      "hp": 3,
+      "magicDef": 0,
+      "pic": "9_07.png",
+      "shootAccuracy": 0,
+      "shootRange": 0,
+      "spells": [
+        14,
+        12
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Осадный легион \"Тайфун\"",
+      "unitName": "Мутант-автоматчик",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 1,
+      "pic": "9_08.png",
+      "shootAccuracy": 4,
+      "shootRange": 4,
+      "spells": [
+        13
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Осадный легион \"Тайфун\"",
+      "unitName": "Мутант-террорист",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 0,
+      "pic": "9_03.png",
+      "shootAccuracy": 4,
+      "shootRange": 3,
+      "spells": [
+        12
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Осадный легион \"Тайфун\"",
+      "unitName": "Террорист",
+      "hit": 1,
+      "hp": 2,
+      "magicDef": 2,
+      "pic": "9_06.png",
+      "shootAccuracy": 4,
+      "shootRange": 4,
+      "spells": [
+        5
+      ]
+    },
+    {
+      "fractionId": 4,
+      "squadName": "Осадный легион \"Тайфун\"",
+      "unitName": "Террорист-снайпер",
+      "hit": 0,
+      "hp": 2,
+      "magicDef": 0,
+      "pic": "9_04.png",
+      "shootAccuracy": 4,
+      "shootRange": 5,
+      "spells": []
+    }
+  ],
+  "spells": [
+    {
+      "id": 1,
+      "name": [
+        "Слепота",
+        "Танец Дервиша"
+      ],
+      "isMagic": false,
+      "range": -1,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 2,
+      "name": "Ан Гард",
+      "isMagic": true,
+      "range": -1,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 3,
+      "name": "Молния",
+      "isMagic": true,
+      "range": 4,
+      "direction": 1,
+      "power": 1
+    },
+    {
+      "id": 4,
+      "name": "Отчаяние",
+      "isMagic": false,
+      "range": 3,
+      "direction": 0,
+      "power": 1
+    },
+    {
+      "id": 5,
+      "name": "Лекарство",
+      "isMagic": true,
+      "range": 3,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 6,
+      "name": "Прикосновение вампира",
+      "isMagic": true,
+      "range": 1,
+      "direction": 0,
+      "power": 1
+    },
+    {
+      "id": 7,
+      "name": "Огненный шар",
+      "isMagic": true,
+      "range": 4,
+      "direction": 4,
+      "power": 1
+    },
+    {
+      "id": 8,
+      "name": "Помешательство",
+      "isMagic": true,
+      "range": 4,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 9,
+      "name": [
+        "Отвага",
+        "Босеан"
+      ],
+      "isMagic": true,
+      "range": -1,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 10,
+      "name": "Самопожертвование",
+      "isMagic": true,
+      "range": -1,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 11,
+      "name": "Режущая трава",
+      "isMagic": false,
+      "range": 4,
+      "direction": 0,
+      "power": 2
+    },
+    {
+      "id": 12,
+      "name": "Сила мутанта",
+      "isMagic": false,
+      "range": -1,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 13,
+      "name": "Вихрь",
+      "isMagic": true,
+      "range": -1,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 14,
+      "name": [
+        "Отравленный нож",
+        "Колдовство нидзя"
+      ],
+      "isMagic": true,
+      "range": 0,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 15,
+      "name": "Ярость",
+      "isMagic": true,
+      "range": 3,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 16,
+      "name": "За мной",
+      "isMagic": true,
+      "range": -1,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 17,
+      "name": "Дыхание тайфуна",
+      "isMagic": true,
+      "range": -1,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 18,
+      "name": "Пли",
+      "isMagic": true,
+      "range": -1,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 19,
+      "name": "Туман",
+      "isMagic": false,
+      "range": 4,
+      "direction": 0,
+      "power": 2
+    },
+    {
+      "id": 20,
+      "name": "Огненный дождь",
+      "isMagic": true,
+      "range": 1,
+      "direction": 0,
+      "power": 2
+    },
+    {
+      "id": 21,
+      "name": "Ни шагу назад",
+      "isMagic": true,
+      "range": -1,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 22,
+      "name": "Месть",
+      "isMagic": true,
+      "range": 4,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 23,
+      "name": "Залпом пли",
+      "isMagic": true,
+      "range": -1,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 24,
+      "name": "Ледяное копье",
+      "isMagic": true,
+      "range": 3,
+      "direction": 2,
+      "power": 1
+    },
+    {
+      "id": 25,
+      "name": "Колдовская завеса",
+      "isMagic": false,
+      "range": 3,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 26,
+      "name": "Панацея",
+      "isMagic": true,
+      "range": 4,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 27,
+      "name": "Аура крестоносца",
+      "isMagic": false,
+      "range": 6,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 28,
+      "name": "Тевтонское копье",
+      "isMagic": true,
+      "range": 4,
+      "direction": 1,
+      "power": 0
+    },
+    {
+      "id": 29,
+      "name": "Едкий дождь",
+      "isMagic": true,
+      "range": 4,
+      "direction": 0,
+      "power": -1
+    },
+    {
+      "id": 30,
+      "name": "Обреченность",
+      "isMagic": true,
+      "range": -1,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 31,
+      "name": "Песнь скальда",
+      "isMagic": true,
+      "range": -1,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 32,
+      "name": "Хальт",
+      "isMagic": false,
+      "range": 4,
+      "direction": 0,
+      "power": 2
+    },
+    {
+      "id": 33,
+      "name": "Огонь",
+      "isMagic": true,
+      "range": 4,
+      "direction": 0,
+      "power": 2
+    },
+    {
+      "id": 34,
+      "name": [
+        "Сила медведя",
+        "Мощь титанов"
+      ],
+      "isMagic": true,
+      "range": 0,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 35,
+      "name": "Черный глаз",
+      "isMagic": false,
+      "range": 4,
+      "direction": 0,
+      "power": 1
+    },
+    {
+      "id": 36,
+      "name": "Целеуказание",
+      "isMagic": true,
+      "range": 4,
+      "direction": 0,
+      "power": 2
+    },
+    {
+      "id": 37,
+      "name": "Дыхание смерти",
+      "isMagic": true,
+      "range": 0,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 38,
+      "name": "Клюв гарпии",
+      "isMagic": true,
+      "range": 3,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 39,
+      "name": "Помешательство",
+      "isMagic": false,
+      "range": 4,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 40,
+      "name": "Самум",
+      "isMagic": true,
+      "range": 2,
+      "direction": 2,
+      "power": 0
+    },
+    {
+      "id": 41,
+      "name": "Дух легионого орла",
+      "isMagic": true,
+      "range": -1,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 42,
+      "name": "Барра",
+      "isMagic": true,
+      "range": -1,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 43,
+      "name": "Мощь дуба",
+      "isMagic": true,
+      "range": 3,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 44,
+      "name": "Волчий вой",
+      "isMagic": false,
+      "range": 4,
+      "direction": 0,
+      "power": 1
+    },
+    {
+      "id": 45,
+      "name": "Пали",
+      "isMagic": true,
+      "range": 0,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 46,
+      "name": "Серебряная пуля",
+      "isMagic": true,
+      "range": -1,
+      "direction": 0,
+      "power": 2
+    },
+    {
+      "id": 47,
+      "name": "Наговор на клинок",
+      "isMagic": false,
+      "range": 0,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 48,
+      "name": "Отрава нидзя",
+      "isMagic": true,
+      "range": 4,
+      "direction": 0,
+      "power": 2
+    },
+    {
+      "id": 49,
+      "name": "На помощь",
+      "isMagic": true,
+      "range": 0,
+      "direction": 0,
+      "power": 0
+    },
+    {
+      "id": 50,
+      "name": "Гоблинское зелье",
+      "isMagic": true,
+      "range": -1,
+      "direction": 0,
+      "power": 0
+    }
+  ]
+}

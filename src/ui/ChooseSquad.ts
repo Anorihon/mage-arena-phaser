@@ -4,10 +4,13 @@ import GameObject = Phaser.GameObjects.GameObject;
 
 
 export default class ChooseSquad extends GridSizer {
-    private static readonly columnProportions: Array<number> = [.2, .8]
-    private static readonly rowProportions: Array<number> = [.3, .7]
-    private cards: Array<Phaser.GameObjects.Image> = []
-    private fullViewCard: Phaser.GameObjects.Image
+    private static readonly columnProportions: Array<number> = [.2, .8];
+    private static readonly rowProportions: Array<number> = [.3, .7];
+    private cards: Array<Phaser.GameObjects.Image> = [];
+    private fullViewCard: Phaser.GameObjects.Image;
+
+    private readonly MAX_HEROES: number = 6;
+    private heroes: Buttons;
 
     constructor(scene: Phaser.Scene) {
         super(scene, {
@@ -17,8 +20,6 @@ export default class ChooseSquad extends GridSizer {
             rowProportions: ChooseSquad.rowProportions,
         });
 
-        const db: Database = Database.getInstance();
-
         // BG
         const { width: screenWidth, height: screenHeight } = this.scene.cameras.main;
         this.addBackground(scene.add.image(
@@ -27,98 +28,134 @@ export default class ChooseSquad extends GridSizer {
             'bg')
         );
 
-        // Fractions block
-        db.requestFractions().then(() => {
-            this.createHeroesCards();
-            this.createCardView();
 
-            // Fractions list
-            const fractionsButtons: Array<GameObject> = [];
-            let firstFractionKey: string = '';
+        this.createHeroesCards();
+        this.createCardView();
 
-            const squadsPages: Pages = new Pages(scene, {});
-            this.add(squadsPages, { column: 0, row: 1 });
+        // Fractions list
+        const fractions = Database.getFractions();
+        const fractionsButtons: Array<GameObject> = [];
+        let firstFractionKey: string = '';
+
+        const squadsPages: Pages = new Pages(scene, {});
+        squadsPages.on('pagevisible', (btns: Buttons) => {
+            if (btns) {
+                btns.emitButtonClick(0);
+            }
+        });
+        this.add(squadsPages, { column: 0, row: 1 });
 
 
-            db.fractions.forEach((value, key) => {
-                if (!firstFractionKey) {
-                    firstFractionKey = value.img;
+        fractions.forEach(fraction => {
+            if (!firstFractionKey) {
+                firstFractionKey = fraction.img;
+            }
+
+            fractionsButtons.push(
+                this.createFractionButton(fraction.name, fraction.img)
+            );
+        });
+
+        const buttons = new Buttons(scene, {
+            orientation: 'y',
+            type: 'radio',
+            buttons: fractionsButtons,
+            setValueCallback: (button, value) => {
+                // @ts-ignore
+                button.getElement('text').setColor(value ? '#1DE10D' : 'white');
+
+                if (value) {
+                    squadsPages.swapPage(button.name);
                 }
+            }
+        })
+            .layout();
+        buttons.emitButtonClick(0);
+        this.add(buttons, { column: 0, row: 0 });
 
-                fractionsButtons.push(
-                    this.createFractionButton(key, value.img)
+        // Squads list
+        fractions.forEach(fraction => {
+            const btns: Array<GameObject> = [];
+
+            fraction.squads.forEach(squadName => {
+                btns.push(
+                    this.createSquadButton(squadName)
                 );
             });
 
-            const buttons = new Buttons(scene, {
+            const squadButtons: Buttons = new Buttons(scene, {
                 orientation: 'y',
                 type: 'radio',
-                buttons: fractionsButtons,
+                buttons: btns,
                 setValueCallback: (button, value) => {
                     // @ts-ignore
                     button.getElement('text').setColor(value ? '#1DE10D' : 'white');
-
-                    if (value) {
-                        const btns: GameObject = squadsPages.currentPage;
-
-                        if (btns) {
-                            (btns as Buttons).forEachButtton(button => {
-                                (btns as Buttons).setData(button.name, false);
-                            });
-                        }
-
-                        squadsPages.swapPage(button.name);
-                    }
                 }
             })
-                .setData(firstFractionKey, true)
                 .layout();
-            scene.add.existing(buttons);
-            this.add(buttons, { column: 0, row: 0 });
 
-            // Squads list
-            db.fractions.forEach((value, key) => {
-                const btns: Array<GameObject> = [];
+            squadButtons.on('button.click', (button: GameObject, index: number) => {
+                // @ts-ignore
+                const squadName: string = button.getElement('text').text;
+                const units = Database.getSquadUnits(squadName);
+                const loadCount = Database.loadCards(units);
+                const cards: Array<string> = [];
 
-                value.squads.forEach(squadName => {
-                    btns.push(
-                        this.createSquadButton(squadName)
-                    );
+                units.forEach(unit => {
+                    cards.push(`hero-${unit.pic}`);
                 });
 
-                const squadButtons: Buttons = new Buttons(scene, {
-                    orientation: 'y',
-                    type: 'radio',
-                    buttons: btns,
-                    setValueCallback: (button, value) => {
-                        // @ts-ignore
-                        button.getElement('text').setColor(value ? '#1DE10D' : 'white');
-                    }
-                })
-                    .layout();
-                scene.add.existing(squadButtons);
-                squadsPages.addPage(squadButtons, {
-                    key: value.img,
-                    align: Phaser.Display.Align.TOP_LEFT,
-                    padding: {left: 0, right: 0, top: 0, bottom: 0},
-                    expand: true
-                });
+                this.hideHeroesCards();
+
+                if (loadCount > 0) {
+                    this.scene.load.once('complete', () => {
+                        this.showHeroesCards(cards);
+                    });
+                    this.scene.load.start();
+                } else {
+                    this.showHeroesCards(cards);
+                }
+            }, this);
+
+            squadsPages.addPage(squadButtons, {
+                key: fraction.img,
+                align: Phaser.Display.Align.TOP_LEFT,
+                padding: {left: 0, right: 0, top: 0, bottom: 0},
+                expand: true
             });
-            squadsPages.swapPage(firstFractionKey);
-
-            this.onResize();
         });
+        squadsPages.swapPage(firstFractionKey);
+
+        this.onResize();
 
         scene.scale.on('resize', this.onResize, this);
     }
 
+    showHeroesCards(cards: Array<string>) {
+        cards.forEach((card, index) => {
+            const button = this.heroes.getButton(index);
+
+            (button as Phaser.GameObjects.Image).setTexture(card);
+            this.heroes.showButton(index);
+        });
+
+        this.heroes.layout();
+        this.heroes.emitButtonClick(0);
+    }
+
+    private hideHeroesCards() {
+        this.heroes.forEachButtton((button, index) => {
+            this.heroes.hideButton(index);
+        });
+        this.heroes.layout();
+    }
+
     private createHeroesCards() {
-        const MAX_CARDS: number = 6;
         const { height: screenHeight } = this.scene.cameras.main;
         const boxHeight: number = screenHeight * ChooseSquad.rowProportions[0];
         const cardHeightMod: number = .85;
 
-        for (let i = 0; i < MAX_CARDS; i++) {
+        for (let i = 0; i < this.MAX_HEROES; i++) {
             const card: Phaser.GameObjects.Image = this.scene.add.image(0, 0, 'hero');
 
             card.displayHeight = boxHeight * cardHeightMod;
@@ -127,7 +164,7 @@ export default class ChooseSquad extends GridSizer {
             this.cards.push(card);
         }
 
-        const heroes = new Buttons(this.scene, {
+        this.heroes = new Buttons(this.scene, {
             orientation: 'x',
             align: 'center',
             space: { left: 0, right: 0, top: 0, bottom: 0, item: 10 },
@@ -136,11 +173,15 @@ export default class ChooseSquad extends GridSizer {
         })
             .layout();
 
-        heroes.on('button.click', (button: GameObject, index: number) => {
-            console.log(`Click on card #${index}`);
+        this.heroes.on('button.click', (card: Phaser.GameObjects.Image) => {
+            if (this.fullViewCard) {
+                this.fullViewCard.setTexture(card.texture.key);
+                this.fullViewCard.setVisible(true);
+            }
         }, this);
 
-        this.add(heroes, { column: 1, row: 0 });
+        this.add(this.heroes, { column: 1, row: 0 });
+        this.hideHeroesCards();
     }
 
     private createCardView() {
@@ -156,6 +197,7 @@ export default class ChooseSquad extends GridSizer {
         this.fullViewCard = this.scene.add.image(0, 0, 'hero');
         this.fullViewCard.displayHeight = boxHeight * cardHeightMod;
         this.fullViewCard.scaleX = this.fullViewCard.scaleY;
+        this.fullViewCard.setVisible(false);
 
         const button: Label = new Label(this.scene, {
             width: 200,

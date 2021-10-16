@@ -1,53 +1,72 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs } from 'firebase/firestore';
-
 type Fraction = {
-    img: string,
-    squads: Array<string>
+    id: number;
+    name: string;
+    img: string;
+    squads: Array<string>;
 }
 
-export default class Database {
-    private static instance: Database
-    private firebaseDB: any
+type Unit = {
+    fractionId: number;
+    squadName: string;
+    unitName: string;
+    hit: number;
+    hp: number;
+    magicDef: number;
+    pic: string;
+    shootAccuracy: number;
+    shootRange: number;
+    spells: Array<number>;
+}
 
-    public fractions = new Map<string, Fraction>();
+type Spell = {
+    id: number;
+    name: string | Array<string>;
+    isMagic: boolean;
+    range: number;
+    direction: number;
+    power: number;
+}
 
+type DB = {
+    fractions: Array<Fraction>;
+    units: Array<Unit>;
+    spells: Array<Spell>;
+}
 
-    private constructor() {
-        // Initialize Firebase
-        initializeApp({
-            apiKey: "AIzaSyAAUpGOY7lBxacetipo7wSo2-Ks5vzdQM4",
-            authDomain: "mage-arena-ddae5.firebaseapp.com",
-            projectId: "mage-arena-ddae5",
-            storageBucket: "mage-arena-ddae5.appspot.com",
-            messagingSenderId: "841478924881",
-            appId: "1:841478924881:web:f725b0d643a1cf21846670"
-        });
+class Database {
+    private scene: Phaser.Scene;
+    private db: DB = {
+        fractions: [],
+        units: [],
+        spells: []
+    };
+    private cards: Array<string> = [];
 
-        this.firebaseDB = getFirestore();
+    init(scene: Phaser.Scene) {
+        this.scene = scene;
+        this.db = scene.cache.json.get('db');
     }
 
-    static getInstance (): Database {
-        if (!Database.instance) {
-            Database.instance = new Database();
-        }
-
-        return Database.instance;
+    getFractions(): Array<Fraction> {
+        return this.db.fractions;
     }
 
-    async requestFractions() {
-        const querySnapshot = await getDocs(collection(this.firebaseDB, "fractions"));
+    getSquadUnits(squadName: string) {
+        return this.db.units.filter(unit => unit.squadName === squadName);
+    }
 
-        querySnapshot.forEach(doc => {
-            // doc.data() is never undefined for query doc snapshots
-            // console.log(doc.id, " => ", doc.data().squads);
-            const data = doc.data();
-            const fractionData: Fraction = {
-                img: data.img,
-                squads: data.squads
-            };
+    loadCards(units: Array<Unit>): number {
+        let needLoad: number = 0;
 
-            this.fractions.set(data.short_name ? data.short_name : doc.id, fractionData);
+        units.forEach(unit => {
+           if (this.cards.indexOf(unit.pic) === -1) {
+               needLoad++;
+               this.scene.load.image(`hero-${unit.pic}`, `../assets/img/heroes/${unit.pic}`);
+           }
         });
+
+        return needLoad;
     }
 }
+
+export default new Database();
