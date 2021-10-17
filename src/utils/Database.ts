@@ -3,6 +3,7 @@ type Fraction = {
     name: string;
     img: string;
     squads: Array<string>;
+    shortName?: string;
 }
 
 type Unit = {

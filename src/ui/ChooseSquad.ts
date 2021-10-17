@@ -45,18 +45,18 @@ export default class ChooseSquad extends GridSizer {
         });
         this.add(squadsPages, { column: 0, row: 1 });
 
-
         fractions.forEach(fraction => {
             if (!firstFractionKey) {
                 firstFractionKey = fraction.img;
             }
 
             fractionsButtons.push(
-                this.createFractionButton(fraction.name, fraction.img)
+                this.createFractionButton(fraction.shortName ? fraction.shortName : fraction.name, fraction.img)
             );
         });
 
-        const buttons = new Buttons(scene, {
+        // Fractions Icons
+        const fractionsIcons = new Buttons(scene, {
             orientation: 'y',
             type: 'radio',
             buttons: fractionsButtons,
@@ -70,8 +70,8 @@ export default class ChooseSquad extends GridSizer {
             }
         })
             .layout();
-        buttons.emitButtonClick(0);
-        this.add(buttons, { column: 0, row: 0 });
+        fractionsIcons.emitButtonClick(0);
+        this.add(fractionsIcons, { column: 0, row: 0 });
 
         // Squads list
         fractions.forEach(fraction => {
