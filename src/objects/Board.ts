@@ -41,6 +41,10 @@ export default class Board extends ContainerLite {
 
         // Generate grid
         this.generateGrid();
+
+        scene.input.keyboard.on('keyup-M', () => {
+            this.generateGrid(true);
+        });
     }
 
     generateGrid(resetCells: boolean = false) {
