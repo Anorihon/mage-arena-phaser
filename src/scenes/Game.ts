@@ -1,14 +1,13 @@
 import { Sizer, GridSizer } from 'phaser3-rex-plugins/templates/ui/ui-components.js';
 import RexUIPlugin from 'phaser3-rex-plugins/templates/ui/ui-plugin.js';
 
-import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs } from 'firebase/firestore';
 import Board from "../objects/Board";
 import ChooseSquad from "../ui/ChooseSquad";
 import Database from "../utils/Database";
+import IRexScene from "../interfaces/IRexScene";
 
 
-export class Game extends Phaser.Scene {
+export class Game extends Phaser.Scene implements IRexScene{
   public rexUI: RexUIPlugin
 
   private bg: Phaser.GameObjects.Image // background image
@@ -66,56 +65,23 @@ export class Game extends Phaser.Scene {
     this.board = new Board(this);
     this.mainLayout.add(
         this.board,
-        { column: 1, row: 1 }
+        { column: 1, row: 1, align: 'left-top' }
     );
 
     // Choose squad scene
-    new ChooseSquad(this);
+    // new ChooseSquad(this);
 
     this.scale.on('resize', this.onResize, this);
     this.scale.refresh();
-
-    // Layout
-    // const mainSizer = new Sizer(this,{
-    //   x: screenWidth / 2,
-    //   y: screenHeight / 2,
-    //   orientation: 'x',
-    //   width: screenWidth,
-    //   height: screenHeight,
-    // });
-    // this.add.existing(mainSizer);
-
-    // const TOTAL_ROWS: number = 12;
-    // const TOTAL_COLS: number = 12;
-    // const CELL_SIZE: number = Math.floor(screenHeight / TOTAL_ROWS);
-    // const BOARD_PROPORTION: number = CELL_SIZE * TOTAL_COLS / screenWidth;
-    // const COLUMN_PROPORTION: number = (1 - BOARD_PROPORTION) / 2;
-    //
-    // mainSizer
-    //     // .add(this.add.zone(0, 0, 100, screenHeight),1)
-    //     .add(this.add.rectangle(0, 0, 100, screenHeight,0x00FABD), COLUMN_PROPORTION)
-    //     .add(new Board(this), BOARD_PROPORTION)
-    //     .add(this.add.rectangle(0, 0, 100, screenHeight,0x6DBDAA), COLUMN_PROPORTION)
-    //     .layout();
-
-
-
-    // Create map
-    // new Map(this);
-
-    // this.firebaseTest();
   }
 
   onResize(gameSize: Phaser.Structs.Size) {
     const { width: screenWidth, height: screenHeight } = gameSize;
     const centerX: number = screenWidth / 2;
     const centerY: number = screenHeight / 2;
-    const { TOTAL_ROWS, TOTAL_COLS } = Board;
-    const CELL_SIZE: number = Math.floor(screenHeight / TOTAL_ROWS);
-    const BOARD_PROPORTION: number = CELL_SIZE * TOTAL_COLS / screenWidth;
+    const { TOTAL_COLS, cellSize } = Board;
+    const BOARD_PROPORTION: number = cellSize * TOTAL_COLS / screenWidth;
     const COLUMN_PROPORTION: number = (1 - BOARD_PROPORTION) / 2;
-
-    this.game.registry.set('cell_size', CELL_SIZE);
 
     this.mainLayout
         .setPosition(centerX, centerY)
@@ -124,28 +90,5 @@ export class Game extends Phaser.Scene {
         .setColumnProportion(1, BOARD_PROPORTION)
         .setColumnProportion(2, COLUMN_PROPORTION)
         .layout();
-  }
-
-  async firebaseTest() {
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyAAUpGOY7lBxacetipo7wSo2-Ks5vzdQM4",
-      authDomain: "mage-arena-ddae5.firebaseapp.com",
-      projectId: "mage-arena-ddae5",
-      storageBucket: "mage-arena-ddae5.appspot.com",
-      messagingSenderId: "841478924881",
-      appId: "1:841478924881:web:f725b0d643a1cf21846670"
-    };
-
-    // Initialize Firebase
-    initializeApp(firebaseConfig);
-
-    const db = getFirestore();
-    const querySnapshot = await getDocs(collection(db, "fractions"));
-
-    querySnapshot.forEach(doc => {
-      // doc.data() is never undefined for query doc snapshots
-      console.log(doc.id, " => ", doc.data());
-    });
   }
 }

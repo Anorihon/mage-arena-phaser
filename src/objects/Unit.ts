@@ -1,4 +1,4 @@
-import Map from "./Map";
+import GameBoard from "./GameBoard";
 import UnitChipParam from "./UnitChipParam";
 
 
@@ -12,19 +12,19 @@ export default class Unit extends Phaser.GameObjects.Container {
     constructor(scene: Phaser.Scene) {
         super(scene);
 
-        this.width = Map.CELL_SIZE;
-        this.height = Map.CELL_SIZE;
+        this.width = GameBoard.CELL_SIZE;
+        this.height = GameBoard.CELL_SIZE;
 
         const card: Phaser.GameObjects.Image = scene.add.image(0, 0, 'hero');
         const bounds: Phaser.Geom.Rectangle = card.getBounds();
 
-        const halfOfCell: number = Map.CELL_SIZE * .5;
+        const halfOfCell: number = GameBoard.CELL_SIZE * .5;
 
         const scaleMod: number = .25;
         const scaledWidth: number = bounds.width * scaleMod;
         const scaledHeight: number = bounds.height * scaleMod;
-        const cropWidth: number = bounds.width * (Map.CELL_SIZE / scaledWidth);
-        const cropHeight: number = bounds.height * (Map.CELL_SIZE / scaledHeight);
+        const cropWidth: number = bounds.width * (GameBoard.CELL_SIZE / scaledWidth);
+        const cropHeight: number = bounds.height * (GameBoard.CELL_SIZE / scaledHeight);
 
         card
             .setPosition(0, -halfOfCell)
@@ -52,8 +52,8 @@ export default class Unit extends Phaser.GameObjects.Container {
             .strokeRect(
                 -halfOfCell + borderWidth / 2,
                 -halfOfCell + borderWidth / 2,
-                Map.CELL_SIZE - borderWidth,
-                Map.CELL_SIZE - borderWidth
+                GameBoard.CELL_SIZE - borderWidth,
+                GameBoard.CELL_SIZE - borderWidth
             )
         ;
         this.add(border);

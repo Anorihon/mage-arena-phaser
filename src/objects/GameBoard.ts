@@ -3,45 +3,54 @@ import {Cell, FieldTypes} from "./Cell";
 import GameObject = Phaser.GameObjects.GameObject;
 import {TileXYType} from "phaser3-rex-plugins/plugins/board/types/Position";
 import Unit from "./Unit";
+import IRexScene from "../interfaces/IRexScene";
 
 
-export default class Map {
-    static readonly ROWS: number = 12;
-    static readonly COLS: number = 12;
+export default class GameBoard extends Board {
+    static readonly TOTAL_ROWS: number = 12;
+    static readonly TOTAL_COLS: number = 12;
 
     public static CELL_SIZE: number = 50;
 
-    public board: Board;
     public cellsBoard: MiniBoard;
     public unitsBoard: MiniBoard;
 
 
-    constructor(scene: Phaser.Scene) {
+    constructor(scene: IRexScene) {
+        super(scene, {
+            grid: {
+                gridType: 'quadGrid',
+                x: 0,
+                y: 0,
+                cellWidth: 0,
+                cellHeight: 0,
+                type: 0
+            },
+            width: GameBoard.TOTAL_COLS,
+            height: GameBoard.TOTAL_ROWS
+        });
+
+        const {width: screenWidth, height: screenHeight} = scene.rexUI.viewport;
+
         // Update cell size
-        Map.CELL_SIZE = Math.floor(scene.cameras.main.height / Map.ROWS);
+        GameBoard.CELL_SIZE = Math.floor(screenHeight / GameBoard.TOTAL_ROWS);
 
         // Create board
-        const alignX: number = scene.cameras.main.width / 2 - Map.COLS / 2 * Map.CELL_SIZE + Map.CELL_SIZE / 2;
-        const alignY: number = scene.cameras.main.height / 2 - Map.ROWS / 2 * Map.CELL_SIZE + Map.CELL_SIZE / 2;
-
         const grid: QuadGrid = new QuadGrid({
-            x: alignX,
-            y: alignY,
-            cellWidth: Map.CELL_SIZE,
-            cellHeight: Map.CELL_SIZE,
+            x: 0,
+            y: 0,
+            cellWidth: GameBoard.CELL_SIZE,
+            cellHeight: GameBoard.CELL_SIZE,
             type: 0
         });
+        this.setGrid(grid);
 
-        this.board = new Board(scene, {
-            grid,
-            width: Map.COLS,
-            height: Map.ROWS
-        });
 
         // Create cells mini-board
         this.cellsBoard = new MiniBoard(
             scene,
-            alignX, alignY,
+            0,
+            0,
             {
                 grid,
                 draggable: false
@@ -51,7 +60,8 @@ export default class Map {
         // Create units miniboard
         this.unitsBoard = new MiniBoard(
             scene,
-            alignX, alignY,
+            0,
+            0,
             {
                 grid,
                 draggable: false
@@ -59,7 +69,7 @@ export default class Map {
         );
 
         // Fill base grid
-        this.board.forEachTileXY((tileXY, board) => {
+        this.forEachTileXY((tileXY, board) => {
             this.cellsBoard.addChess(
                 new Cell(scene, 0, 0),
                 tileXY.x, tileXY.y, 0
@@ -77,8 +87,8 @@ export default class Map {
                 2, 1, 1
             )
             .setOrigin(0, 0)
-            .putOnMainBoard(this.board)
-            .alignToMainBoard(this.board)
+            .putOnMainBoard(this)
+            .alignToMainBoard(this)
         ;
         // this.board.gridAlign();
         // this.unitsBoard.pullOutFromMainBoard();
@@ -108,7 +118,7 @@ export default class Map {
             const cellsInRow: number = 3;
 
             dirs.forEach(dirIndex => {
-                let chess = this.board.getNeighborChess(cell, dirIndex);
+                let chess = this.getNeighborChess(cell, dirIndex);
 
                 if (chess) {
                     let _cell: Cell = (chess as Cell);
@@ -153,10 +163,10 @@ export default class Map {
 
     generate_grid(resetCells: boolean = false) {
         this.cellsBoard
-            .putOnMainBoard(this.board)
-            .alignToMainBoard(this.board);
+            .putOnMainBoard(this)
+            .alignToMainBoard(this);
 
-        const cellsList : Array<GameObject> = this.board.getAllChess();
+        const cellsList : Array<GameObject> = this.getAllChess();
         const cellsCount : number = cellsList.length;
 
         // Reset cells to Field state
@@ -205,7 +215,7 @@ export default class Map {
                         cell.row >= startRow + 1 && cell.row < finRow - (isVertical ? 1 : 0) && // если ячейка в ходит в указанную область в рядочке
                         cell.col >= startCol + 1 && cell.col < finCol - (!isVertical ? 1 : 0) // если ячейка в ходит в указанную область в столбце
                     ) {
-                        const nextCell = this.board.tileXYZToChess(cell.col + (!isVertical ? 1 : 0), cell.row + (isVertical ? 1 : 0), 0);
+                        const nextCell = this.tileXYZToChess(cell.col + (!isVertical ? 1 : 0), cell.row + (isVertical ? 1 : 0), 0);
 
                         if (nextCell && (nextCell as Cell).fieldType === FieldTypes.Field) {
                             workCells.push(cell);
@@ -216,7 +226,7 @@ export default class Map {
                 rand = Phaser.Math.Between(0, workCells.length - 1);
                 workCells[rand].fieldType = FieldTypes.Water;
 
-                (this.board.tileXYZToChess(
+                (this.tileXYZToChess(
                     workCells[rand].col + (!isVertical ? 1 : 0),
                     workCells[rand].row + (isVertical ? 1 : 0),
                     0
@@ -286,7 +296,7 @@ export default class Map {
             }
         }
 
-        this.board.gridAlign();
+        this.gridAlign();
         // this.cellsBoard.pullOutFromMainBoard();
     }
 
@@ -295,7 +305,7 @@ export default class Map {
 
         for (let row = 0; row < cellsInRow; row++) {
             for (let col = 0; col < cellsInCol; col++) {
-                result.push(this.board.tileXYZToChess(
+                result.push(this.tileXYZToChess(
                     startCell.col + col,
                     startCell.row + row,
                     0
@@ -309,7 +319,7 @@ export default class Map {
     flipBoard() {
         this.unitsBoard.pullOutFromMainBoard();
 
-        const cellsList: Array<GameObject> = this.board.getAllChess();
+        const cellsList: Array<GameObject> = this.getAllChess();
         const cellsCount: number = cellsList.length;
         const initPositions: Array<TileXYType> = [];
 
@@ -328,7 +338,7 @@ export default class Map {
             .forEach((cell, index) => {
             const pos: TileXYType = initPositions[index];
 
-            this.board.moveChess(cell, pos.x, pos.y, 0, true);
+            this.moveChess(cell, pos.x, pos.y, 0, true);
         });
 
         this.unitsBoard.putBack();

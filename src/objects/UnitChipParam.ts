@@ -1,4 +1,4 @@
-import Map from "./Map";
+import GameBoard from "./GameBoard";
 
 export default class UnitChipParam extends Phaser.GameObjects.Container {
     shape: Phaser.GameObjects.Rectangle
@@ -7,7 +7,7 @@ export default class UnitChipParam extends Phaser.GameObjects.Container {
     constructor(scene: Phaser.Scene, text: string = '-', shapeColor: number = 0xffffff, textColor: string = '#ffffff') {
         super(scene);
 
-        const shapeSize: number = Map.CELL_SIZE * .25;
+        const shapeSize: number = GameBoard.CELL_SIZE * .25;
 
         this.width = shapeSize;
         this.height = shapeSize;
