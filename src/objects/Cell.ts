@@ -1,4 +1,3 @@
-import Map from './Map';
 import Board from "./Board";
 
 export enum FieldTypes {Field, Forest, Mount, Water, Swamp}
@@ -15,10 +14,10 @@ export class Cell extends Phaser.GameObjects.Container {
     row: number
 
 
-    constructor(scene: Phaser.Scene, col: number, row: number) {
-        super(scene);
+    constructor(scene: Phaser.Scene, col: number, row: number, x?:number, y?:number) {
+        super(scene, x, y);
         
-        const cellSize: number = Math.floor(scene.cameras.main.height / Board.TOTAL_ROWS);
+        const cellSize: number = Board.cellSize;
 
         this.width = cellSize;
         this.height = cellSize;
