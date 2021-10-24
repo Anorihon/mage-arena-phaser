@@ -12,12 +12,12 @@ export default class Board extends ContainerLite {
     constructor(scene: IRexScene) {
         super(scene, 0, 0);
 
-        Board.cellSize = Math.floor(scene.rexUI.viewport.height / Board.TOTAL_ROWS);
+        const { width: screenWidth, height: screenHeight } = scene.rexUI.viewport;
+
+        Board.cellSize = Math.floor(screenHeight / Board.TOTAL_ROWS);
         this.width = Board.TOTAL_COLS * Board.cellSize;
         this.height = Board.TOTAL_ROWS * Board.cellSize;
 
-        const startX: number = this.width / 2 * -1;
-        const startY: number = this.height / 2 * -1;
         const halfOfCellSize: number = Board.cellSize / 2;
 
         // Fill grid with cells
@@ -28,8 +28,8 @@ export default class Board extends ContainerLite {
                 const cell: Cell = new Cell(
                     scene,
                     col, row,
-                    startX + halfOfCellSize + col * Board.cellSize,
-                    startY + halfOfCellSize + row * Board.cellSize
+                    screenWidth / 2 - (this.width / 2) + halfOfCellSize + col * Board.cellSize,
+                    halfOfCellSize + row * Board.cellSize
                 );
 
                 cells.push(cell);
@@ -44,6 +44,10 @@ export default class Board extends ContainerLite {
 
         scene.input.keyboard.on('keyup-M', () => {
             this.generateGrid(true);
+        });
+
+        scene.input.keyboard.on('keyup-R', () => {
+            this.mirrorGrid();
         });
     }
 
@@ -179,5 +183,23 @@ export default class Board extends ContainerLite {
         }
 
         return null;
+    }
+
+    mirrorGrid() {
+        const { width: screenWidth, height: screenHeight } = (this.scene as IRexScene).rexUI.viewport;
+        const halfOfCellSize: number = Board.cellSize / 2;
+
+        this.grid = this.grid.map(row => row.reverse()).reverse();
+
+        for (let row = 0; row < Board.TOTAL_ROWS; row++) {
+            for (let col = 0; col < Board.TOTAL_COLS; col++) {
+                const cell: Cell = this.grid[row][col];
+
+                cell.row = row;
+                cell.col = col;
+                cell.x = screenWidth / 2 - (this.width / 2) + halfOfCellSize + col * Board.cellSize;
+                cell.y = halfOfCellSize + row * Board.cellSize;
+            }
+        }
     }
 }

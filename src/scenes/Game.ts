@@ -46,33 +46,17 @@ export class Game extends Phaser.Scene implements IRexScene{
     this.bg = this.add.image(screenWidth / 2, screenHeight / 2, 'bg');
     this.mainLayout.addBackground(this.bg);
 
-    // const RandomInt = Phaser.Math.Between;
-
-    // for (let row = 0; row < totalRows; row++) {
-    //   for (let col = 0; col < totalCols; col++) {
-    //
-    //     this.mainLayout.add(
-    //         this.add.rectangle(0, 0, 300, 300, RandomInt(0, 0x1000000)),
-    //         {
-    //           column: col,
-    //           row: row,
-    //           expand: true
-    //         }
-    //     );
-    //   }
-    // }
-
-    this.board = new Board(this);
-    this.mainLayout.add(
-        this.board,
-        { column: 1, row: 1, align: 'left-top' }
-    );
-
     // Choose squad scene
     // new ChooseSquad(this);
 
     this.scale.on('resize', this.onResize, this);
     this.scale.refresh();
+
+    this.board = new Board(this);
+    this.mainLayout.add(
+        this.board,
+        { column: 1, row: 1 }
+    );
   }
 
   onResize(gameSize: Phaser.Structs.Size) {
