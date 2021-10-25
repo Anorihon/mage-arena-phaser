@@ -84,7 +84,14 @@ export default class Board extends ContainerLite {
             for (let i = 0; i < listLength; i++) {
                 const cell: Cell = cells[i];
 
-                if (cell.fieldType !== FieldTypes.Field) continue;
+                if (
+                    cell.fieldType !== FieldTypes.Field ||
+                    cell.row === 0 ||
+                    cell.row === Board.TOTAL_ROWS - 1 ||
+                    (isVertical && cell.row === Board.TOTAL_ROWS - 2)
+                ) {
+                    continue;
+                }
 
                 const nextCell: Cell | null = this.getCell(
                     cell.row + (isVertical ? 1 : 0),
@@ -147,7 +154,7 @@ export default class Board extends ContainerLite {
                     4, 4
                 );
 
-                fillWater(innerCells);
+                fillWater(list);
                 fillSquare(list, FieldTypes.Mount);
                 fillSquare(list, FieldTypes.Forest);
                 fillSwamp(innerCells);
